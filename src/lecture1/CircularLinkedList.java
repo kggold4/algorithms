@@ -1,6 +1,7 @@
 package lecture1;
 
 public class CircularLinkedList {
+
     private NodeCycle head;
     private int size;
 
