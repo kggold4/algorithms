@@ -22,61 +22,44 @@ public class AirPlane {
      *
      */
 
-    public static int minPrice(Node[][] mat) {
+    public static int minPrice(Node[][] mat) { // O(n * m)
         int n = mat.length, m = mat[0].length;
         mat[0][0].price = 0;
 
         for(int i = 1; i < n; i++) mat[i][0].price = mat[i-1][0].price + mat[i-1][0].y;
         for(int i = 1; i < m; i++) mat[0][i].price = mat[0][i-1].price + mat[0][i-1].x;
-
         for(int i = 1; i < n; i++) {
             for(int j = 1; j < m; j++) {
                 mat[i][j].price = Math.min(mat[i-1][j].price + mat[i-1][j].y, mat[i][j-1].price + mat[i][j-1].x);
             }
         }
-
         return mat[n-1][m-1].price;
     }
 
-    public static String minPricePath(Node[][] mat) {
+    public static String minPricePath(Node[][] mat) { // O(n * m)
         int n = mat.length, m = mat[0].length;
         mat[0][0].price = 0;
 
         for(int i = 1; i < n; i++) mat[i][0].price = mat[i-1][0].price + mat[i-1][0].y;
         for(int i = 1; i < m; i++) mat[0][i].price = mat[0][i-1].price + mat[0][i-1].x;
-
         for(int i = 1; i < n; i++) {
             for(int j = 1; j < m; j++) {
                 mat[i][j].price = Math.min(mat[i-1][j].price + mat[i-1][j].y, mat[i][j-1].price + mat[i][j-1].x);
             }
         }
-
         return path(mat);
     }
 
-    private static String path(Node[][] mat) {
+    private static String path(Node[][] mat) { // O(n + m)
         int i = mat.length -1, j = mat[0].length - 1;
         String ans = "";
         while (i != 0 && j != 0) {
-            if(mat[i-1][j].price + mat[i-1][j].y < mat[i][j-1].price + mat[i][j-1].x) {
-                ans = "1" + ans;
-                i--;
-            } else {
-                ans = "0" + ans;
-                j--;
-            }
+            if(mat[i-1][j].price + mat[i-1][j].y < mat[i][j-1].price + mat[i][j-1].x) { ans = "1" + ans;i--; }
+            else { ans = "0" + ans; j--; }
         }
 
-        while(i != 0) {
-            ans = "1" + ans;
-            i--;
-        }
-
-        while(j != 0) {
-            ans = "0" + ans;
-            j--;
-        }
-
+        while(i != 0) { ans = "1" + ans; i--; }
+        while(j != 0) { ans = "0" + ans; j--; }
         return ans;
     }
 
