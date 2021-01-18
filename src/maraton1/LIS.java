@@ -33,6 +33,7 @@ public class LIS {
         return k;
     }
 
+    // O(n^2)
     public static int[] dynamicLIS(int[] seq) {
         int n = seq.length;
         int[] lis = new int[n];

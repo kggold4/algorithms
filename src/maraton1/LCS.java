@@ -93,6 +93,10 @@ public class LCS {
         return ans;
     }
 
+    public static void LCS3(String s1, String s2, String s3) {
+
+    }
+
     /**
      * main function
      * @param args
