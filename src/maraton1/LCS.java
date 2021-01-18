@@ -2,6 +2,7 @@ package maraton1;
 
 import java.util.Arrays;
 
+// LCS = Longest Common Subsequence
 public class LCS {
 
     /**
@@ -90,16 +91,6 @@ public class LCS {
             }
         }
         return ans;
-    }
-
-    /**
-     * print a given matrix function
-     * @param mat
-     */
-    private static void printMatrix(int[][] mat) {
-        for(int i = 0; i < mat.length; i++) {
-            System.out.println(Arrays.toString(mat[i]));
-        }
     }
 
     /**
