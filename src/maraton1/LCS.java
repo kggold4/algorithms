@@ -93,7 +93,23 @@ public class LCS {
         return ans;
     }
 
-    public static void LCS3(String s1, String s2, String s3) {
+
+    /**
+     * base case:
+     * f(0,j,k) = f(i,0,k) = f(i,j,0) = 0
+     * f(i,j,k) = 1 + f(i-1,j-1,k-1), if s1[i] == s2[j] == s3[k]
+     *
+     * f(i,j,k) = max(f(i-1,j,k), f(i,j-1,k), f(i,j,k-1))
+     *
+     * complexity = O(n*m*l)
+     * n = s1.length
+     * m = s2.length
+     * l = s3.length
+     * @param s1
+     * @param s2
+     * @param s3
+     */
+    public static void dynamicLCS3(String s1, String s2, String s3) {
 
     }
 
