@@ -113,14 +113,102 @@ public class LCS {
 
     }
 
+
+    /**
+     * return the smallest common sequence (strings) length between two strings
+     * for example:
+     * s1 = "abcbdab"
+     * s2 = "bdcaba"
+     * SCS(s1, s2) = 9 ("abdcabdab")
+     * solution: |SCS(s1, s2)| = |s1| + |s2| - |LCS(s1, s2)|
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public static int SCS_size(String s1, String s2) {
+        return s1.length() + s2.length() - dynamicLCS_size(s1, s2);
+    }
+
+    /**
+     * return the smallest common sequence (strings) between two strings
+     * for example:
+     * s1 = "abcbdab"
+     * s2 = "bdcaba"
+     * SCS(s1, s2) = ("abdcabdab")
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public static String SCS(String s1, String s2) {
+
+        // getting the LCS between s1 and s1
+        String common = dynamicLCS(s1, s2);
+
+        // creating an help array with all zeros (for checking if word is in the common string)
+        int[] help = new int[common.length()];
+
+        // the answer - smallest common string
+        String ans = "";
+
+        // getting the biggest string (max) and the smallest string (min)
+        String max, min;
+        if(s1.length() > s2.length()) {
+            max = s1;
+            min = s2;
+        } else {
+            max = s2;
+            min = s1;
+        }
+
+        // going throw each char in s1 and s2 only the indexes below the smallest string (min)
+        for(int i = 0; i < min.length(); i++) {
+
+            String c1 = min.charAt(i) + "";
+            String c2 = max.charAt(i) + "";
+
+            int k = 0, x = common.indexOf(c1, k);
+            if(x != -1) { while (help[x] == 1) { x = common.indexOf(c1, ++k); if (x == -1) break; } }
+
+            if(x != -1 && help[x] == 0) help[x] = 1;
+            else ans = ans + c1;
+
+            k = 0;
+            x = common.indexOf(c2, k);
+            if(x != -1) { while(help[x] == 1) { x = common.indexOf(c2, ++k); if(x == -1) break; } }
+
+            if(x != -1 && help[x] == 0) help[x] = 1;
+            else ans = ans + c2;
+        }
+
+        // going throw each char in s1 and s2 only the indexes above the smallest string (min)
+        // to below the bigger string (max)
+        for(int i = min.length(); i < max.length(); i++) {
+            String c = max.charAt(i) + "";
+            int k = 0, x = common.indexOf(c, k);
+            while(help[x] == 1) { x = common.indexOf(c, ++k); if(x == -1) break; }
+
+            if(x != -1 && help[x] == 0) help[x] = 1;
+            else ans = ans + c;
+        }
+        return ans;
+    }
+
     /**
      * main function
      * @param args
      */
     public static void main(String[] args) {
-        String s1 = "abcde";
-        String s2 = "eafddbac";
-        System.out.println(dynamicLCS(s1, s2)); // output: "abc"
-        System.out.println(dynamicLCS_size(s1, s2)); // output: 3
+//        String s1 = "abcde";
+//        String s2 = "eafddbac";
+//        System.out.println(dynamicLCS(s1, s2)); // output: "abc"
+//        System.out.println(dynamicLCS_size(s1, s2)); // output: 3
+//
+
+        String s3 = "abcbdab";
+        String s4 = "bdcaba";
+        System.out.println(dynamicLCS_size(s3, s4));
+        System.out.println("LCS between s3 and s4: \"" + dynamicLCS(s3, s4) + "\"");
+        System.out.println(SCS_size(s3, s4));
+        System.out.println("SCS between s3 and s4: \"" + SCS(s3, s4) + "\"");
     }
 }
