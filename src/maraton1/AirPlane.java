@@ -22,6 +22,11 @@ public class AirPlane {
      *
      */
 
+    /**
+     * return the minimum price of the path
+     * @param mat
+     * @return
+     */
     public static int minPrice(Node[][] mat) { // O(n * m)
         int n = mat.length, m = mat[0].length;
         mat[0][0].price = 0;
@@ -36,6 +41,11 @@ public class AirPlane {
         return mat[n-1][m-1].price;
     }
 
+    /**
+     * return the minimum path
+     * @param mat
+     * @return
+     */
     public static String minPricePath(Node[][] mat) { // O(n * m)
         int n = mat.length, m = mat[0].length;
         mat[0][0].price = 0;
@@ -50,6 +60,11 @@ public class AirPlane {
         return path(mat);
     }
 
+    /**
+     * build minimum path from matrix
+     * @param mat
+     * @return
+     */
     private static String path(Node[][] mat) { // O(n + m)
         int i = mat.length -1, j = mat[0].length - 1;
         String ans = "";

@@ -139,46 +139,44 @@ public class LCS {
      * @param s2
      * @return ans - the SCS
      */
-    public static String SCS(String s1, String s2) {
+    static String dynamicSCS(String s1, String s2) {
 
-        // getting the LCS between s1 and s1
-        String common = dynamicLCS(s1, s2);
+        // s1 and s2 length
+        int m = s1.length(), n = s2.length();
 
-        // creating an help array with all zeros (for checking if word is in the common string)
-        int[] help = new int[common.length()];
+        // build matrix
+        int dp[][] = new int[m + 1][n + 1];
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n; j++) {
+                if (i == 0) dp[i][j] = j;
+                else if (j == 0) dp[i][j] = i;
+                else if (s1.charAt(i - 1) == s2.charAt(j - 1)) dp[i][j] = 1 + dp[i - 1][j - 1];
+                else dp[i][j] = 1 + Math.min(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
 
-        // the answer - smallest common string
+        // build string
         String ans = "";
-
-        // getting the biggest string (max) and the smallest string (min)
-        String max, min;
-        if(s1.length() > s2.length()) { max = s1; min = s2; } else { max = s2; min = s1; }
-
-        // going throw each char in s1 and s2 only the indexes below the smallest string (min)
-        for(int i = 0; i < min.length(); i++) {
-
-            String c1 = min.charAt(i) + "", c2 = max.charAt(i) + "";
-            int k = 0, x = common.indexOf(c1, k);
-            if(x != -1) while(help[x] == 1) { x = common.indexOf(c1, ++k); if (x == -1) break; }
-            if(x != -1 && help[x] == 0) help[x] = 1;
-            else ans = ans + c1;
-
-            k = 0;
-            x = common.indexOf(c2, k);
-            if(x != -1) while(help[x] == 1) { x = common.indexOf(c2, ++k); if(x == -1) break; }
-            if(x != -1 && help[x] == 0) help[x] = 1;
-            else ans = ans + c2;
+        int i = m, j = n;
+        while (i > 0 && j > 0) {
+            if(s1.charAt(i - 1) == s2.charAt(j - 1)) { ans += (s1.charAt(i - 1)); i--; j--; }
+            else if(dp[i - 1][j] > dp[i][j - 1]) { ans += (s2.charAt(j - 1)); j--; }
+            else { ans += (s1.charAt(i - 1)); i--; }
         }
 
-        // going throw each char in s1 and s2 only the indexes above the smallest string (min)
-        // to below the bigger string (max)
-        for(int i = min.length(); i < max.length(); i++) {
-            String c = max.charAt(i) + "";
-            int k = 0, x = common.indexOf(c, k);
-            if(x != -1) while(help[x] == 1) { x = common.indexOf(c, ++k); if(x == -1) break; }
-            if(x != -1 && help[x] == 0) help[x] = 1;
-            else ans = ans + c;
+        while(i > 0) { ans += (s1.charAt(i - 1)); i--; }
+        while(j > 0) { ans += (s2.charAt(j - 1)); j--; }
+
+        // reversing the array
+        char[] tempArray = ans.toCharArray();
+        int left, right = 0;
+        right = tempArray.length - 1;
+        for(left = 0; left < right; left++, right--) {
+            char temp = tempArray[left];
+            tempArray[left] = tempArray[right];
+            tempArray[right] = temp;
         }
+        ans = String.valueOf(tempArray);
         return ans;
     }
 
@@ -197,6 +195,6 @@ public class LCS {
         System.out.println(dynamicLCS_size(s3, s4));
         System.out.println("LCS between s3 and s4: \"" + dynamicLCS(s3, s4) + "\"");
         System.out.println(SCS_size(s3, s4));
-        System.out.println("SCS between s3 and s4: \"" + SCS(s3, s4) + "\"");
+        System.out.println("SCS between s3 and s4: \"" + dynamicSCS(s3, s4) + "\"");
     }
 }
