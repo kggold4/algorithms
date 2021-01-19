@@ -1,5 +1,7 @@
 package maraton1;
 
+import java.awt.*;
+
 public class AirPlane {
 
     /**
@@ -78,13 +80,76 @@ public class AirPlane {
         return ans;
     }
 
+    /**
+     * return the minimum size of path between two points
+     * @param mat
+     * @param p1
+     * @param p2
+     * @return
+     */
+    public static int minPriceBetween(Node[][] mat, Point p1, Point p2) { // O(n * m)
+         int n = p2.y - p1.y + 1, m = p2.x - p1.x + 1;
+        mat[p1.y][p1.x].price = 0;
+
+        for(int i = p1.y + 1; i < p1.y + n; i++) mat[i][p1.x].price = mat[i-1][p1.x].price + mat[i-1][p1.x].y;
+        for(int i = p1.x + 1; i < p1.x + m; i++) mat[p1.y][i].price = mat[p1.y][i-1].price + mat[p1.y][i-1].x;
+        for(int i = p1.y + 1; i < p1.y + n; i++) {
+            for(int j = p1.x + 1; j < p1.x + m; j++) {
+                mat[i][j].price = Math.min(mat[i-1][j].price + mat[i-1][j].y, mat[i][j-1].price + mat[i][j-1].x);
+            }
+        }
+        return mat[p2.y][p2.x].price;
+    }
+
+    /**
+     * this function return true if at least one of the nodes in on one of the shortest path
+     * between (0,0) and (n,m)
+     *
+     * solution:
+     * first we compare between (p1,q1) and (p2,q2), when n1 = (p1,q1) and n2 = (p2,q2)
+     * if p1 <= p2 and q1 <= q2: the first node in the path is (p1,q1)
+     * if p2 <= p1 and q2 <= q1: the first node in the path is (p2,q2)
+     *
+     * if and only if:
+     * minPricePathBetween((0,0),(m,n)) = minPricePathBetween((0,0),(p1,q1)) + minPricePathBetween((p1,q1),(p2,q2))
+     *                                                                       + minPricePathBetween((p2,q2),(m,n))
+     * @param mat
+     * @param p1
+     * @param p2
+     * @return
+     */
+    public static boolean isOnMinPath(Node[][] mat, Point p1, Point p2) {
+        if(p2.x <= p1.x && p2.y <= p1.y) {
+
+            // swap
+            Point t = p1;
+            p1 = p2;
+            p2 = t;
+        }
+        if(p1.x <= p2.x && p1.y <= p2.y) {
+            int allPrice = minPriceBetween(mat, new Point(0,0), new Point(mat.length - 1, mat[0].length - 1));
+            int toP1 = minPriceBetween(mat, new Point(0,0), p1);
+            int p1toP2 = minPriceBetween(mat, p1, p2);
+            int p2to = minPriceBetween(mat, p2, new Point(mat.length - 1, mat[0].length - 1));
+            if(allPrice == toP1 + p1toP2 + p2to) return true;
+            else return false;
+
+        } else return false;
+    }
+
+    /**
+     * main function
+     * @param args
+     */
     public static void main(String[] args) {
         Node[][] mat = {
                 { new Node(1, 5), new Node(4, 1), new Node(0, 6) },
-                { new Node(4, 7), new Node(2, 8), new Node(0, 3) },
+                { new Node(4, 7), new Node(2, 5), new Node(0, 3) },
                 { new Node(1, 0), new Node(2, 0), new Node(0, 0) }
             };
         System.out.println(minPrice(mat));
         System.out.println(minPricePath(mat));
+        System.out.println(minPriceBetween(mat, new Point(0,0), new Point(2,2)));
+        System.out.println(isOnMinPath(mat, new Point(1,1), new Point(1,2)));
     }
 }
