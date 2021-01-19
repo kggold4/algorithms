@@ -43,6 +43,27 @@ public class AirPlane {
         return mat[n-1][m-1].price;
     }
 
+
+    public static int numberOfMinPrice(Node[][] mat) {
+        int n = mat.length, m = mat[0].length;
+        mat[0][0].price = 0;
+        mat[0][0].numOfPath = 1;
+
+        for(int i = 1; i < n; i++) { mat[i][0].price = mat[i-1][0].price + mat[i-1][0].y; mat[i][0].numOfPath = 1; }
+        for(int i = 1; i < m; i++) { mat[0][i].price = mat[0][i-1].price + mat[0][i-1].x; mat[0][i].numOfPath = 1; }
+        for(int i = 1; i < n; i++) {
+            for(int j = 1; j < m; j++) {
+                int fromDown = mat[i-1][j].price + mat[i-1][j].y;
+                int fromLeft = mat[i][j-1].price + mat[i][j-1].x;
+                mat[i][j].price = Math.min(fromDown, fromLeft);
+                if(fromDown < fromLeft) mat[i][j].numOfPath = mat[i-1][j].numOfPath;
+                else if(fromDown > fromLeft) mat[i][j].numOfPath = mat[i][j-1].numOfPath;
+                else mat[i][j].numOfPath = mat[i-1][j].numOfPath + mat[i][j-1].numOfPath;
+            }
+        }
+        return mat[n-1][m-1].numOfPath;
+    }
+
     /**
      * return the minimum path
      * @param mat
@@ -111,8 +132,9 @@ public class AirPlane {
      * if p2 <= p1 and q2 <= q1: the first node in the path is (p2,q2)
      *
      * if and only if:
-     * minPricePathBetween((0,0),(m,n)) = minPricePathBetween((0,0),(p1,q1)) + minPricePathBetween((p1,q1),(p2,q2))
-     *                                                                       + minPricePathBetween((p2,q2),(m,n))
+     * minPricePathBetween((0,0),(m,n)) = minPricePathBetween((0,0),(p1,q1))
+     *                                  + minPricePathBetween((p1,q1),(p2,q2))
+     *                                  + minPricePathBetween((p2,q2),(m,n))
      * @param mat
      * @param p1
      * @param p2
