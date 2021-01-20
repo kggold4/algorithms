@@ -21,6 +21,16 @@ public class LargestPower {
         return ans;
     }
 
+    /**
+     * using dynamic programming
+     * define f(i) = the length of the longest sequence s.t  i is the last index in the sequence
+     * f(i) = MAX_i<j (f(i) + 1 if *, 1 else)
+     * when * is mean:
+     * a[i]^2 = a[j] or a[j]^2 = a[i] (condition)
+     * @param arr
+     * @return
+     */
+
     // O(n^2)
     public static int longestSequenceWithConditionSize(int[] arr) {
         int n = arr.length;
