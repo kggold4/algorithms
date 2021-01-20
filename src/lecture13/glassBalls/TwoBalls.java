@@ -1,5 +1,4 @@
-
-package glassBalls;
+package lecture13.glassBalls;
 /**
  * 
  * Glass Balls Algorithm:
