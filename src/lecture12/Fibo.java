@@ -1,4 +1,4 @@
-package fibonacci;
+package lecture12;
 
 public class Fibo {
 
@@ -17,7 +17,7 @@ public class Fibo {
 		while(n != 0) {
 			if(n % 2 == 1) ans = mulMat(ans,A);
 			A = mulMat(A,A);
-			n /=2;
+			n /= 2;
 		}
 		return ans[1][1];
 	}

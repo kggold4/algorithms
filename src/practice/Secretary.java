@@ -2,6 +2,9 @@ package practice;
 
 import java.util.Arrays;
 
+/**
+ * secretary problem algorithm
+ */
 public class Secretary {
     public static int[] secretary(int[] queue, int[] time) {
         for(int i = 0; i < queue.length; i++) {
