@@ -10,7 +10,7 @@ public class FibonacciMatrix {
             {1,0}
     };
 
-    public static int fibonacciMatrix(int n) {
+    public static long fibonacciMatrix(int n) {
         int[][] ans = F;
         int[][] A = F;
         while(n != 0) {
