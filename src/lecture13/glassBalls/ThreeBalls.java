@@ -49,6 +49,6 @@ public class ThreeBalls {
 	}
 	public static void main(String[] args) {
 		System.out.println("\nnumber of balls = 3");
-		check3();
+		System.out.println(numberOfChecking3(100));
 	}
 }

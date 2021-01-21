@@ -3,21 +3,21 @@ package lecture13.glassBalls;
  * 
  * Glass Balls Algorithm:
  * Get minimum number of checking 
- * to find the floor from which the bulls are broken
+ * to find the floor from which the balls are broken
  * Using 2 balls and dividing the building by Dynamic programming
  */
 public class TwoBalls {
 	//f(n,2) = min((max(i, f(n-i,2)+1), i=1,...,n) where n is a number of flour 
-	public static int numberOfChecking2(int n){
+	public static int numberOfChecking2(int n) {
 		int numChecks = 0;
 		int[] f = new int[n+1];
 		if (n == 1) numChecks = 1;
 		else if (n == 2) numChecks = 2;
 		else { //n>=3
 			f[0] = 0; f[1] = 1; f[2] = 2;
-			for (int i=3; i<=n; i++){
+			for (int i=3; i<=n; i++) {
 				int min = n;
-				for (int j = 1; j<i; j++){
+				for(int j = 1; j < i; j++){
 					int x = Math.max(j, f[i-j]+1);
 					if (x < min) min = x;
 				}
@@ -45,7 +45,7 @@ public class TwoBalls {
 	}
 	public static void main(String[] args) {
 		System.out.println("number of balls = 2");
-		check2();
+		System.out.println(numberOfChecking2(100));
 	}
 }
 /*
