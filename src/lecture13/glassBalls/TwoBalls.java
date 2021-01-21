@@ -11,9 +11,9 @@ public class TwoBalls {
 	public static int numberOfChecking2(int n){
 		int numChecks = 0;
 		int[] f = new int[n+1];
-		if (n==1) numChecks = 1;
-		else if (n==2) numChecks = 2;
-		else{ //n>=3
+		if (n == 1) numChecks = 1;
+		else if (n == 2) numChecks = 2;
+		else { //n>=3
 			f[0] = 0; f[1] = 1; f[2] = 2;
 			for (int i=3; i<=n; i++){
 				int min = n;

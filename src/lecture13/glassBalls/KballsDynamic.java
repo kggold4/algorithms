@@ -9,19 +9,19 @@ package lecture13.glassBalls;
  */
 public class KballsDynamic {
 	
-	static int drops(int ball, int floor){
-		int drops[][] = new int[ball+1][floor+1];
-		for(int j = 0; j <= floor; j++) { //one ball
+	static int drops(int n, int k){
+		int drops[][] = new int[n+1][k+1];
+		for(int j = 0; j <= k; j++) { //one ball
 			drops[0][j]=0;
 			drops[1][j]=j;
 		}
-		for(int i = 2; i <= ball; i++) { //i - number of the ball
+		for(int i = 2; i <= n; i++) { //i - number of the ball
 			drops[i][0]=0;
 			drops[i][1]=0;
-			if (floor >= 2) drops[i][2] = 2;
-			for(int j = 2; j <= floor; j++) { //j - number of the floor
+			if (k >= 2) drops[i][2] = 2;
+			for(int j = 2; j <= k; j++) { //j - number of the floor
 					//Defines the minimum as the highest possible value
-					int minimum = floor+1;
+					int minimum = k+1;
 					for(int x = 1; x < j; x++) { // x - number of the floor
 						minimum=Math.min(minimum, (1 + Math.max(drops[i][j - x], drops[i - 1][x - 1])));
 					}
@@ -30,7 +30,7 @@ public class KballsDynamic {
 			}
 		}
 		printMatrix(drops);
-		return drops[ball][floor];
+		return drops[n][k];
 	}
 
 	//**************************************************

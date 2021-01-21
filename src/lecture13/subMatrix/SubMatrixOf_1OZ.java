@@ -6,11 +6,26 @@ package lecture13.subMatrix;
 public class SubMatrixOf_1OZ {
 	public static void main(String[] args) {
 		//int mat[][] = MyLibrary.randomMatrixOf01(6, 6);
-		int[][] mat = {{1,1,0,0,1,0},{0,1,1,1,1,1},{1,1,1,1,1,0},{0,0,1,1,0,0}};
-		int mat1[][] = {{0,0,0,1,0}, {0,1,1,1,0}, {0,1,1,1,0},
-				{0,1,1,1,0},{0,1,1,1,0},{0,1,0,1,1}};
-		int[][] mat2 = {{0,0,1,0,0},{1,1,1,1,0},{0,1,1,1,1},{1,1,1,1,0},{1,1,0,0,1}};
+		int[][] mat = {
+				{1,1,0,0,1,0},
+				{0,1,1,1,1,1},
+				{1,1,1,1,1,0},
+				{0,0,1,1,0,0}};
+		int mat1[][] = {
+				{0,0,0,1,0},
+				{0,1,1,1,0},
+				{0,1,1,1,0},
+				{0,1,1,1,0},
+				{0,1,1,1,0},
+				{0,1,0,1,1}};
+		int[][] mat2 = {
+				{0,0,1,0,0},
+				{1,1,1,1,0},
+				{0,1,1,1,1},
+				{1,1,1,1,0},
+				{1,1,0,0,1}};
 		subMatrixOf1(mat2);
+		subMatrixOf1_3Matrices(mat2);
 		//System.out.println("\nMethod of 3 matrices:");
 		//subMatrixOf1_3Matrices(mat2);
 	}
