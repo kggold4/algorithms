@@ -4,7 +4,7 @@ public class FirstParkingSolution {
 
     public static void main(String[] args) {
 
-        int len = 1000;
+        int len = 10000;
 
         // create circular linked list with len nodes
         CircularLinkedList list = new CircularLinkedList();

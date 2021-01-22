@@ -1,14 +1,12 @@
 package exercise1;
 /**
  * Alice and Bob flip coin game:
- * Strategy 1. Alice calls a random number - Probability �
- * Strategy 2. Alice calls 1 and Bob calls 1 - Probability �
- * Strategy 2A. Alice calls 0 and Bob calls 0 - Probability �
- * Strategy 3. Everyone says that he (she) received - Probability �
+ * Strategy 1. Alice calls a random number - Probability 1/2
+ * Strategy 2. Alice calls 1 and Bob calls 1 - Probability 3/4
+ * Strategy 2A. Alice calls 0 and Bob calls 0 - Probability 3/4
+ * Strategy 3. Everyone says that he (she) received - Probability 1/2
  * Strategy 4. Alice calls that she got and 
- * 			   Bob calls the opposite of what he received - 
- * 			   Probability 1
- *
+ * 			   Bob calls the opposite of what he received - Probability 1
  */
 
 public class AliceAndBobFlipCoinGam {
@@ -89,7 +87,10 @@ public class AliceAndBobFlipCoinGam {
 		boolean result = false;
 		int AliceResult = AliceGame();
 		int BobResult = BobGame();
+
+		// if bob and alice got different numbers
 		if ((AliceResult == BobResult) ||
+				// if bo and alice got the same numbers
 				(BobResult == 1 - AliceResult))
 			result = true;
 		return result;
@@ -102,11 +103,11 @@ public class AliceAndBobFlipCoinGam {
 		int GameStrategy2A = 0;
 		int GameStrategy3 = 0;
 		int GameStrategy4 = 0;
-		boolean result1 = false;
-		boolean result2 = false;
-		boolean result2A = false;
-		boolean result3 = false;
-		boolean result4 = false;
+		boolean result1;
+		boolean result2;
+		boolean result2A;
+		boolean result3;
+		boolean result4;
 		for (int i = 0; i < count; i++){
 			result1 = GameStrategy1();
 			if (result1 == true)

@@ -1,6 +1,8 @@
 package maraton1;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 // LCS = Longest Common Subsequence
 public class LCS {
@@ -15,7 +17,6 @@ public class LCS {
      *
      * recursive definition of the dynamic function
      * f(0,j) = f(i,0) = 0
-     * f(i,j) = 1 + f(i-1, j-1) if s1[i] == s2[j]
      * f(i,j) = 1 + f(i-1, j-1) if s1[i] == s2[j]
      * f(i,j) = MAX(f(i, j-1), f(i-1, j)) if s1[i] != s2[j]
      *
@@ -93,7 +94,6 @@ public class LCS {
         return ans;
     }
 
-
     /**
      * base case:
      * f(0,j,k) = f(i,0,k) = f(i,j,0) = 0
@@ -116,8 +116,9 @@ public class LCS {
     /**
      * return the smallest common sequence (strings) length between two strings
      * for example:
-     * s1 = "abcbdab"
-     * s2 = "bdcaba"
+     * s1 = "abcbdab" = 7
+     * s2 = "bdcaba" = 6
+     * LCS(s1, s2) = 4 ("bcba")
      * SCS(s1, s2) = 9 ("abdcabdab")
      * solution: |SCS(s1, s2)| = |s1| + |s2| - |LCS(s1, s2)|
      * @param s1
@@ -155,6 +156,8 @@ public class LCS {
             }
         }
 
+        Common.printMatrix(dp);
+
         // build string
         String ans = "";
         int i = m, j = n;
@@ -166,6 +169,8 @@ public class LCS {
 
         while(i > 0) { ans += (s1.charAt(i - 1)); i--; }
         while(j > 0) { ans += (s2.charAt(j - 1)); j--; }
+
+
 
         // reversing the array
         char[] tempArray = ans.toCharArray();
@@ -196,5 +201,6 @@ public class LCS {
         System.out.println("LCS between s3 and s4: \"" + dynamicLCS(s3, s4) + "\"");
         System.out.println(SCS_size(s3, s4));
         System.out.println("SCS between s3 and s4: \"" + dynamicSCS(s3, s4) + "\"");
+
     }
 }
