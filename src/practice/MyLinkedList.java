@@ -1,7 +1,7 @@
 package practice;
 
 public class MyLinkedList {
-    private Node head;
+    private NodeLinkedList head;
     private int size;
 
     public MyLinkedList() {
@@ -9,24 +9,24 @@ public class MyLinkedList {
         this.size = 0;
     }
 
-    public Node getHead() { return this.head; }
+    public NodeLinkedList getHead() { return this.head; }
 
     public int getSize() { return this.size; }
 
     public void add(int data) {
-        if(this.head == null) this.head = new Node(data);
+        if(this.head == null) this.head = new NodeLinkedList(data);
         else {
-            Node n = this.head;
+            NodeLinkedList n = this.head;
             while(n.next != null) n = n.next;
-            n.next = new Node(data);
+            n.next = new NodeLinkedList(data);
         }
         this.size++;
     }
 
-    public Node getByIndex(int index) {
+    public NodeLinkedList getByIndex(int index) {
         if(index > this.size) return null;
         else {
-            Node node = this.head;
+            NodeLinkedList node = this.head;
             int i = 0;
             while(i < index) {
                 node = node.next;
@@ -38,7 +38,7 @@ public class MyLinkedList {
 
     public String toString() {
         String ans = "[";
-        Node node = this.head;
+        NodeLinkedList node = this.head;
         int i = 0;
         while(i < this.size) {
             ans += node;

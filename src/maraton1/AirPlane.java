@@ -66,10 +66,11 @@ public class AirPlane {
 
     /**
      * return the minimum path
+     * Complexity = O(n * m)
      * @param mat
      * @return
      */
-    public static String minPricePath(Node[][] mat) { // O(n * m)
+    public static String minPricePath(Node[][] mat) {
         int n = mat.length, m = mat[0].length;
         mat[0][0].price = 0;
 
@@ -103,13 +104,14 @@ public class AirPlane {
 
     /**
      * return the minimum size of path between two points
+     * Complexity = O(n * m)
      * @param mat
      * @param p1
      * @param p2
      * @return
      */
-    public static int minPriceBetween(Node[][] mat, Point p1, Point p2) { // O(n * m)
-         int n = p2.y - p1.y + 1, m = p2.x - p1.x + 1;
+    public static int minPriceBetween(Node[][] mat, Point p1, Point p2) {
+        int n = p2.y - p1.y + 1, m = p2.x - p1.x + 1;
         mat[p1.y][p1.x].price = 0;
 
         for(int i = p1.y + 1; i < p1.y + n; i++) mat[i][p1.x].price = mat[i-1][p1.x].price + mat[i-1][p1.x].y;
@@ -135,6 +137,8 @@ public class AirPlane {
      * minPricePathBetween((0,0),(m,n)) = minPricePathBetween((0,0),(p1,q1))
      *                                  + minPricePathBetween((p1,q1),(p2,q2))
      *                                  + minPricePathBetween((p2,q2),(m,n))
+     *
+     * Complexity = O(n * m)
      * @param mat
      * @param p1
      * @param p2

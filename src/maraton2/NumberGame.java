@@ -1,7 +1,5 @@
 package maraton2;
 
-import java.util.Arrays;
-
 public class NumberGame {
 
     /**
@@ -10,7 +8,7 @@ public class NumberGame {
      * when the array start in index of i and end in index of j -> i <= j
      *
      * f(i,i) = a[i]
-     * f(i,j) = MAX(a[i] - f(i+1,j), a[j]-f(i,j-1))
+     * f(i,j) = MAX(a[i] - f(i+1,j), a[j] - f(i,j-1))
      *
      * for example: [3, 6, 1, 4]
      * we get:
@@ -19,7 +17,7 @@ public class NumberGame {
      * [0, 0, 1, 3]
      * [0, 0, 0, 4]
      *
-     * complexity = O(n * n)
+     * complexity = O(n * n) = O(n ^ 2)
      *
      * @param arr
      * @return

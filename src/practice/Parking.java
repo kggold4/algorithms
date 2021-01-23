@@ -15,10 +15,10 @@ public class Parking {
         System.out.println(lengthOfCircle(list.getHead()));
     }
 
-    public static boolean hasLoop(Node head) {
+    public static boolean hasLoop(NodeLinkedList head) {
         if(head == null) return false;
 
-        Node a, b;
+        NodeLinkedList a, b;
         a = b = head;
         while(true) {
             a = a.next;
@@ -31,10 +31,10 @@ public class Parking {
         }
     }
 
-    public static Node meetNode(Node head) {
+    public static NodeLinkedList meetNode(NodeLinkedList head) {
         if(head == null) return null;
 
-        Node a, b;
+        NodeLinkedList a, b;
         a = b = head;
         while(true) {
             a = a.next;
@@ -47,10 +47,10 @@ public class Parking {
         }
     }
 
-    public static Node CircleStartNode(Node head) {
+    public static NodeLinkedList CircleStartNode(NodeLinkedList head) {
         if(head == null) return null;
 
-        Node a, b;
+        NodeLinkedList a, b;
         a = b = head;
         while(true) {
             a = a.next;
@@ -70,10 +70,10 @@ public class Parking {
         }
     }
 
-    public static int lengthOfCircle(Node head) {
+    public static int lengthOfCircle(NodeLinkedList head) {
         if(head == null) return -1;
 
-        Node a, b;
+        NodeLinkedList a, b;
         a = b = head;
         while(true) {
             a = a.next;

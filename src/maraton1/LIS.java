@@ -17,6 +17,9 @@ public class LIS {
      * our algorithm will search in the answer array with a binary search (always sorted)
      * the right place and replace the older item with the newest.
      * if the new item is the bigger then the other items he make the increasing sequence be longer
+     *
+     * return the length the long increasing sequence of an array
+     * complexity = O(n * log(n))
      * @return
      */
     // increasing
@@ -49,7 +52,13 @@ public class LIS {
         return k;
     }
 
-    public static int[] dynamicLIS(int[] seq) { // O(n^2)
+    /**
+     * return the LIS of an array
+     * complexity = O(n^2)
+     * @param seq
+     * @return
+     */
+    public static int[] dynamicLIS(int[] seq) {
         int n = seq.length;
         int[] lis = new int[n];
         int[][] mat = new int[n][n];

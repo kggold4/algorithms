@@ -5,11 +5,11 @@ package practice;
  * @author Anna
  *
  */
-public class Node {
+public class NodeLinkedList {
     public int data;
-    public Node next;
+    public NodeLinkedList next;
  
-    public Node(int data) {
+    public NodeLinkedList(int data) {
         this.data = data;
         this.next = null;
     }
