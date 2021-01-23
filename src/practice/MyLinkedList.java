@@ -11,21 +11,16 @@ public class MyLinkedList {
 
     public Node getHead() { return this.head; }
 
-    public int getSize() {
-        return size;
-    }
+    public int getSize() { return this.size; }
 
     public void add(int data) {
-        if(this.head == null) {
-            this.head = new Node(data);
-        } else {
+        if(this.head == null) this.head = new Node(data);
+        else {
             Node n = this.head;
-            while(n.next != null) {
-                n = n.next;
-            }
+            while(n.next != null) n = n.next;
             n.next = new Node(data);
         }
-        size++;
+        this.size++;
     }
 
     public Node getByIndex(int index) {
@@ -34,7 +29,6 @@ public class MyLinkedList {
             Node node = this.head;
             int i = 0;
             while(i < index) {
-
                 node = node.next;
                 i++;
             }
@@ -48,7 +42,7 @@ public class MyLinkedList {
         int i = 0;
         while(i < this.size) {
             ans += node;
-            if(i != size - 1) ans += ", ";
+            if(i != this.size - 1) ans += ", ";
             node = node.next;
             i++;
         }
