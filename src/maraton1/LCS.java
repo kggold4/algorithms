@@ -198,9 +198,6 @@ public class LCS {
         String s3 = "abcbdab";
         String s4 = "bdcaba";
         System.out.println(dynamicLCS_size(s3, s4));
-        System.out.println("LCS between s3 and s4: \"" + dynamicLCS(s3, s4) + "\"");
-        System.out.println(SCS_size(s3, s4));
-        System.out.println("SCS between s3 and s4: \"" + dynamicSCS(s3, s4) + "\"");
 
     }
 }

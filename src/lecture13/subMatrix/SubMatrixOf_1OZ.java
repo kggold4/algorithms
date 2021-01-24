@@ -74,7 +74,7 @@ public class SubMatrixOf_1OZ {
 		System.out.println("\nHelp Matrix:");
 		MyLibrary.printIntMatrix(h);
 		System.out.println("maxDim: "+maxDim+", iMax: "+iMax+", jMax: "+jMax);
-	}	
+	}
 	
 	/**
 	 * get min of three numbers

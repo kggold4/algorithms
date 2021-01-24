@@ -51,7 +51,7 @@ public class Ones {
 
     public static void main(String[] args) {
         int[] arr = {1,0,1,1,0,0,1,1,1,0,0,1,1,0,0,1,1,1,1,1,0,1,0};
-        System.out.println(ones(arr));
+        System.out.println(ones(arr)); // output = 4
         indexes(arr);
     }
 }
