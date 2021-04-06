@@ -32,7 +32,7 @@ public class BottleBoolean {
                 mat[ind][index(m, j, n)] = true;
 
                 // fill from one to another
-                int i1 = index(Math.max(0,i+j-n), Math.min(n, i+j), n);
+                int i1 = index(Math.max(0, i+j-n), Math.min(n, i+j), n);
                 mat[ind][i1] = true;
 
                 i1 = index(Math.min(m, i+j), Math.max(0, i+j-m), n);
