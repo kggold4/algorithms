@@ -81,5 +81,4 @@ public class BottleBoolean {
         boolean mat[][] = initBooleanMatrixBottle(1, 2);
         printMatrix(mat);
     }
-
 }
