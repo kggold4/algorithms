@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Arrays;
 
-public class GraphBooleanMatrix implements graph_matrix {
+public class GraphBooleanMatrix implements boolean_graph_matrix {
 
     private boolean[][] mat;
     private int size;
@@ -16,6 +16,31 @@ public class GraphBooleanMatrix implements graph_matrix {
         this.mat = new boolean[this.size][this.size];
     }
 
+    /**
+     * copy constructor
+     * @param oldMatrix
+     */
+    GraphBooleanMatrix(boolean[][] oldMatrix) {
+        this.size = oldMatrix.length;
+        this.mat = new boolean[this.size][this.size];
+        for(int i = 0; i < this.size; i++) {
+            for(int j = 0; j < this.size; j++) {
+                this.mat[i][j] = oldMatrix[i][j];
+            }
+        }
+    }
+
+    /**
+     * making the main diagonal be false value
+     */
+    private void diagonal_default() {
+        for(int i = 0; i < this.size; i++) this.mat[i][i] = false;
+    }
+
+    /**
+     * return a deep copy of the matrix
+     * @return
+     */
     @Override
     public boolean[][] copy() {
         boolean[][] newMatrix = new boolean[this.size][this.size];
@@ -25,15 +50,34 @@ public class GraphBooleanMatrix implements graph_matrix {
         return newMatrix;
     }
 
+    /**
+     * connect between two nodes
+     * @param i
+     * @param j
+     */
     @Override
     public void connect(int i, int j) { this.mat[i][j] = true; this.mat[j][i] = true; }
 
+    /**
+     * disconnect between two nodes
+     * @param i
+     * @param j
+     */
     @Override
     public void disconnect(int i, int j) { this.mat[i][j] = false; }
 
+    /**
+     * return true if two nodes are connected
+     * @param i
+     * @param j
+     * @return
+     */
     @Override
     public boolean isConnected(int i, int j) { return this.mat[i][j]; }
 
+    /**
+     * run floyd-warshall algorithm on the matrix
+     */
     @Override
     public void floyd_warshall() {
         for(int k = 0; k < this.size; k++) {
@@ -45,6 +89,10 @@ public class GraphBooleanMatrix implements graph_matrix {
         }
     }
 
+    /**
+     * return a path matrix
+     * @return
+     */
     @Override
     public String[][] path_matrix() {
         // path matrix

@@ -1,6 +1,6 @@
 package practice;
 
-public interface graph_matrix {
+public interface weighted_graph_matrix {
     public boolean[][] copy();
     public void connect(int i, int j);
     public void disconnect(int i, int j);
