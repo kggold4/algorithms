@@ -35,16 +35,14 @@ public class GraphBooleanMatrix implements graph_matrix {
     public boolean isConnected(int i, int j) { return this.mat[i][j]; }
 
     @Override
-    public String floyd_warshall() {
-        boolean[][] newMatrix = this.copy();
+    public void floyd_warshall() {
         for(int k = 0; k < this.size; k++) {
             for(int i = 0; i < this.size; i++) {
                 for(int j = 0; j < this.size; j++) {
-                    newMatrix[i][j] = newMatrix[i][j] || (newMatrix[i][k] && newMatrix[k][j]);
+                    this.mat[i][j] = this.mat[i][j] || (this.mat[i][k] && this.mat[k][j]);
                 }
             }
         }
-        return toString(newMatrix);
     }
 
     @Override

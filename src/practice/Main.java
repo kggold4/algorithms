@@ -6,7 +6,7 @@ public class Main {
         m.connect(1, 2);
         m.connect(2, 4);
         System.out.println(m.toString());
-        System.out.println(m.floyd_warshall());
+        m.floyd_warshall();
         System.out.println(GraphBooleanMatrix.toString(m.path_matrix()));
     }
 }
