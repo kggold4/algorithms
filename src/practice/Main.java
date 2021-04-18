@@ -2,7 +2,11 @@ package practice;
 
 public class Main {
     public static void main(String[] args) {
-        GraphMatrix m = new GraphMatrix(5, 5);
-        System.out.println(m);
+        GraphBooleanMatrix m = new GraphBooleanMatrix(5);
+        m.connect(1, 2);
+        m.connect(2, 4);
+        System.out.println(m.toString());
+        System.out.println(m.floyd_warshall());
+        System.out.println(GraphBooleanMatrix.toString(m.path_matrix()));
     }
 }
