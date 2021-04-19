@@ -1,8 +1,9 @@
 package practice;
 
 public interface weighted_graph_matrix {
-    public boolean[][] copy();
-    public void connect(int i, int j);
+    public int[][] copy();
+    public void connect(int i, int j, int w);
+    public int getWeight(int i, int j);
     public void disconnect(int i, int j);
     public boolean isConnected(int i, int j);
     public void floyd_warshall();
