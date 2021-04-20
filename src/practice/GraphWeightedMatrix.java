@@ -2,6 +2,7 @@ package practice;
 
 public class GraphWeightedMatrix implements weighted_graph_matrix {
 
+    private final int infinity = Integer.MAX_VALUE;
     private int size;
     private int[][] mat;
 
@@ -42,8 +43,8 @@ public class GraphWeightedMatrix implements weighted_graph_matrix {
         for(int k = 0; k < this.size; k++) {
             for(int i = 0; i < this.size; i++) {
                 for(int j = 0; j < this.size; j++) {
-                    if(this.mat[i][j] > this.mat[i][k] + this.mat[k][j]) {
-                        this.mat[i][j] = this.mat[i][k] + this.mat[k][j];
+                    if(this.mat[i][k] != infinity && this.mat[k][j] != infinity) {
+                        this.mat[i][j] = Math.min(this.mat[i][j], this.mat[i][k] + this.mat[k][j]);
                     }
                 }
             }
