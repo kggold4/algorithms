@@ -6,10 +6,28 @@ public class GraphWeightedMatrix implements weighted_graph_matrix {
     private int size;
     private int[][] mat;
 
+    /**
+     * constructor
+     * @param n
+     */
     public GraphWeightedMatrix(int n) {
         this.size = n;
         this.mat = new int[this.size][this.size];
         clear();
+    }
+
+    /**
+     * copy constructor
+     * @param other
+     */
+    public GraphWeightedMatrix(int[][] other) {
+        this.size = other.length;
+        this.mat = new int[this.size][this.size];
+        for(int i = 0; i < this.size; i++) {
+            for(int j = 0; j < this.size; j++) {
+                this.mat[i][j] = other[i][j];
+            }
+        }
     }
 
     @Override
