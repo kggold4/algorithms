@@ -1,4 +1,4 @@
-package practice;
+package practice_graph_boolean_matrix;
 
 import java.util.Arrays;
 

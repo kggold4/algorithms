@@ -1,4 +1,4 @@
-package practice;
+package practice_graph_boolean_matrix;
 
 public interface boolean_graph_matrix {
     public boolean[][] copy();

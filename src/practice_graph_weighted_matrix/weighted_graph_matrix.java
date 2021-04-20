@@ -1,4 +1,4 @@
-package practice;
+package practice_graph_weighted_matrix;
 
 public interface weighted_graph_matrix {
     public int[][] copy();

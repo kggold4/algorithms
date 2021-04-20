@@ -1,4 +1,4 @@
-package practice;
+package practice_graph_weighted_matrix;
 
 public class Main {
     public static void main(String[] args) {

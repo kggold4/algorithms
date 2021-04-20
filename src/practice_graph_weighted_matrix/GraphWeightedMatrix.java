@@ -1,4 +1,4 @@
-package practice;
+package practice_graph_weighted_matrix;
 
 public class GraphWeightedMatrix implements weighted_graph_matrix {
 
@@ -71,7 +71,27 @@ public class GraphWeightedMatrix implements weighted_graph_matrix {
 
     @Override
     public String[][] path_matrix() {
-        return new String[0][];
+        String[][] newMatrix = new String[this.size][this.size];
+        for(int i = 0; i < this.size; i++) {
+            for(int j = 0; i < this.size; j++) {
+                if(this.mat[i][j] != infinity) newMatrix[i][j] = " " + i + "->" + j + " ";
+                else newMatrix[i][j] = "";
+            }
+        }
+
+        // build matrix
+        for(int k = 0; k < this.size; k++) {
+            for(int i = 0; i < this.size; i++) {
+                for(int j = 0; j < this.size; j++) {
+                    if(this.mat[i][k] != infinity && this.mat[k][j] != infinity) {
+                        this.mat[i][j] = Math.min(this.mat[i][j], this.mat[i][k] + this.mat[k][j]);
+                        newMatrix[i][j] = newMatrix[i][k] + newMatrix[k][j];
+                    }
+                }
+            }
+        }
+
+        return newMatrix;
     }
 
     @Override
