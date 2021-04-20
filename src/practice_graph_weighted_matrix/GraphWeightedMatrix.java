@@ -1,5 +1,7 @@
 package practice_graph_weighted_matrix;
 
+import java.util.Arrays;
+
 public class GraphWeightedMatrix implements weighted_graph_matrix {
 
     private final int infinity = Integer.MAX_VALUE;
@@ -42,7 +44,7 @@ public class GraphWeightedMatrix implements weighted_graph_matrix {
     }
 
     @Override
-    public void connect(int i, int j, int w) { this.mat[i][j] = w; }
+    public void connect(int i, int j, int w) { this.mat[i][j] = this.mat[j][i] = w; }
 
     @Override
     public int getWeight(int i, int j) { return this.mat[i][j]; }
@@ -73,7 +75,7 @@ public class GraphWeightedMatrix implements weighted_graph_matrix {
     public String[][] path_matrix() {
         String[][] newMatrix = new String[this.size][this.size];
         for(int i = 0; i < this.size; i++) {
-            for(int j = 0; i < this.size; j++) {
+            for(int j = 0; j < this.size; j++) {
                 if(this.mat[i][j] != infinity) newMatrix[i][j] = " " + i + "->" + j + " ";
                 else newMatrix[i][j] = "";
             }
@@ -104,5 +106,41 @@ public class GraphWeightedMatrix implements weighted_graph_matrix {
                 this.mat[i][j] = Integer.MAX_VALUE;
             }
         }
+    }
+
+    public String toString() { return toString(this.mat); }
+
+    /**
+     * static function to get the print string of a given matrix
+     * @param mat
+     * @return
+     */
+    public static String toString(int[][] mat) {
+        String ans = "\t";
+        for(int i = 0; i < mat.length; i++) ans += i + "  ";
+        ans += "\n";
+        for(int i = 0; i < mat.length; i++) {
+            ans += + i + "  [";
+            for(int j = 0; j < mat[0].length; j++) {
+                if(mat[i][j] != Integer.MAX_VALUE) ans += mat[i][j];
+                else ans += "INF";
+                if(j != mat[0].length - 1) ans += ", ";
+            }
+            ans += "]\n";
+        }
+        return ans;
+    }
+
+    /**
+     * static function to get the print string of a given matrix
+     * @param mat
+     * @return
+     */
+    public static String toString(String[][] mat) {
+        String ans = "";
+        for(int i = 0; i < mat.length; i++) {
+            ans += Arrays.toString(mat[i]) + "\n";
+        }
+        return ans;
     }
 }
