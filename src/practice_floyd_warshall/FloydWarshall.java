@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 public class FloydWarshall {
 
-    static int infinity = Integer.MAX_VALUE;
+    private static final int infinity = Integer.MAX_VALUE;
 
-    // mat.length == math[0].length
-
+    /**
+     * floyd warshall algorithm on boolean matrix
+     * @param mat
+     */
     public static void floyd_warshall(boolean[][] mat) {
 
         // o(n^3)
@@ -20,6 +22,10 @@ public class FloydWarshall {
         }
     }
 
+    /**
+     * floyd warshall algorithm on integers matrix
+     * @param mat
+     */
     public static void floyd_warshall(int[][] mat) {
 
         // O(n^3)
@@ -68,6 +74,11 @@ public class FloydWarshall {
         return true;
     }
 
+    /**
+     * return the number of connected components in a matrix
+     * @param mat
+     * @return
+     */
     public static int numberOfConnectedComponents(boolean[][] mat) {
         int counter = 0;
         int[] arr = new int[mat.length];
@@ -82,29 +93,47 @@ public class FloydWarshall {
         return counter;
     }
 
+    /**
+     * return true if the graph matrix contains negative circle
+     * @param mat
+     * @return
+     */
+    public static boolean isThereNegativeCircle(int[][] mat) {
+        floyd_warshall(mat);
+        return findNegativeDiagonal(mat);
+    }
 
-//    public static boolean isThereNegativeCycle (int mat[][]){
-//        floydWarshallAlgorithm(mat);
-//        return findNegativeInDiagon(mat);
-//    }
-//    private static boolean findNegativeInDiagon(int mat[][]){
-//        for(int i = 0; i <mat.length ; i++) {
-//            if(mat[i][i] <0) return true;
-//        }
-//        return false;
-//    }
+    private static boolean findNegativeDiagonal(int[][] mat) {
+        for(int i = 0; i < mat.length; i++) {
+            if(mat[i][i] < 0) return true;
+        }
+        return false;
+    }
+
+    /**
+     * print boolean matrix
+     * @param mat
+     */
     public static void printMatrix(boolean[][] mat) {
         for(int i = 0; i < mat.length; i++) {
             System.out.println(Arrays.toString(mat[i]));
         }
     }
 
+    /**
+     * print integers matrix
+     * @param mat
+     */
     public static void printMatrix(int[][] mat) {
         for(int i = 0; i < mat.length; i++) {
             System.out.println(Arrays.toString(mat[i]));
         }
     }
 
+    /**
+     * main function
+     * @param args
+     */
     public static void main(String[] args) {
         int [][] mat = {{0,infinity,-3},{4,0,infinity},{2,infinity,0}};
         floyd_warshall(mat);
