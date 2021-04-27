@@ -86,6 +86,7 @@ public class GraphWeightedMatrix implements weighted_graph_matrix {
             for(int i = 0; i < this.size; i++) {
                 for(int j = 0; j < this.size; j++) {
                     if(this.mat[i][k] != infinity && this.mat[k][j] != infinity) {
+
                         this.mat[i][j] = Math.min(this.mat[i][j], this.mat[i][k] + this.mat[k][j]);
                         newMatrix[i][j] = newMatrix[i][k] + newMatrix[k][j];
                     }
