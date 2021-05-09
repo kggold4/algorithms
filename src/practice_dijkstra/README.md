@@ -1,4 +1,5 @@
-## Dijkstra algorithm pseudo-code: (written by Kfir Goldfarb)
+## Dijkstra algorithm pseudo-code:
+* (written by Kfir Goldfarb)
 ### Complexity = O(|E| + |V|*log|V|)
 
 * V - list of nodes (V is in G)
