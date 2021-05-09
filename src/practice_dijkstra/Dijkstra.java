@@ -32,7 +32,7 @@
  *                      dist[v] = dist[u] + weight(u, v)
  *                      pred[v] = u
  *                      Q.enqueue(v)
-*                   *end-if
+ *                  *end-if
  *              *end-if
  *
  *              visited[u] = true
@@ -100,7 +100,7 @@ public class Dijkstra {
         int k = t;
         String path = Integer.toString(k);
         while(pred[k] != -1) {
-            System.out.println(path);
+//            System.out.println(path);
             k = pred[k];
             path = k + "->" + path;
         }
