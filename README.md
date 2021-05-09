@@ -10,7 +10,7 @@
 1. Chocolate
 1. Negative Circle Matrix
 1. Best Max Sum of subArray
-1. Single-Source Dijkstra
-1. Multi-Source Dijkstra
+1. [Single-Source Dijkstra](src/practice_dijkstra)
+1. [Multi-Source Dijkstra](src/practice_dijkstra)
 1. BFS
 1. DFS
