@@ -78,7 +78,7 @@ public class Dijkstra {
 
     }
 
-    private static void dijkstraAlgorithm(ArrayList<ArrayList<Integer>> G, int s, int t, int[][] weightMatrix) {
+    public static void dijkstraAlgorithm(ArrayList<ArrayList<Integer>> G, int s, int t, int[][] weightMatrix) {
         int n = G.size();
 
         int[] pred = new int[n];
@@ -120,13 +120,6 @@ public class Dijkstra {
         }
 
         System.out.println(path);
-    }
-    private static String reverse(String temp) {
-        String str = "";
-        for(int i = temp.length() - 1; i > 0; i--) {
-            str += temp.charAt(i);
-        }
-        return str;
     }
 
     public static ArrayList<ArrayList<Integer>> InitializeGraph()
