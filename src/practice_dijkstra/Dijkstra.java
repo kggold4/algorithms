@@ -1,6 +1,7 @@
 /**
  *
  * Dijkstra algorithm pseudo-code: (written by Kfir Goldfarb)
+ * Complexity = O(|E| + |V|)
  *
  * V - list of nodes
  * neighbor(v) - return list neighbors of v
