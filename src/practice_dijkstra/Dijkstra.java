@@ -39,11 +39,11 @@ public class Dijkstra {
         dist[s] = 0;
 
         while(!q.isEmpty()) {
-            Integer u = q.poll();
+            int u = q.poll();
             for(int v : G.get(u)) {
-                if(visited[v] == false && dist[u] > dist[v] + weightMatrix[u][v]) {
-                    dist[v] = dist[v] + weightMatrix[u][v];
-                    //visited[v] = true;
+                if(visited[v] == false && (dist[v] > dist[u] + weightMatrix[u][v])) {
+                    q.add(v);
+                    dist[v] = dist[u] + weightMatrix[u][v];
                     pred[v] = u;
                 }
             }
@@ -55,7 +55,7 @@ public class Dijkstra {
 
         // get shortest path
         int k = t;
-        String path = k + "->";
+        String path = Integer.toString(k);
         while(pred[k] != -1) {
             System.out.println(path);
             k = pred[k];
