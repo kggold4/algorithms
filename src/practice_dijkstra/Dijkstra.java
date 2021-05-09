@@ -62,21 +62,7 @@ import java.util.PriorityQueue;
 
 public class Dijkstra {
 
-    static int inf = 1000000;
-    public static void main(String[] args) {
-
-        int[][] mat = {{0 ,1 ,2 ,inf ,inf ,inf ,inf ,inf },
-                {1 ,0 ,4 ,inf ,5 ,inf ,inf ,inf },
-                {2 ,4 ,0 ,7 ,inf ,3 ,inf ,inf },
-                {inf ,inf ,7 ,0 ,3 ,8 ,inf ,inf },
-                {inf ,5 ,inf ,3 ,0 ,inf ,1 ,4 },
-                {inf ,inf ,3 ,8 ,inf ,0 ,2 ,inf },
-                {inf ,inf ,inf ,inf ,1 ,2 ,0 ,5 },
-                {inf ,inf ,inf ,inf ,4 ,inf ,5 ,0 }};
-        ArrayList<ArrayList<Integer>> G = InitializeGraph();
-        dijkstraAlgorithm(G, 0, 7, mat);
-
-    }
+    private static final int inf = 1000000;
 
     public static void dijkstraAlgorithm(ArrayList<ArrayList<Integer>> G, int s, int t, int[][] weightMatrix) {
         int n = G.size();
@@ -122,8 +108,20 @@ public class Dijkstra {
         System.out.println(path);
     }
 
-    public static ArrayList<ArrayList<Integer>> InitializeGraph()
-    {
+    public static void main(String[] args) {
+        int[][] mat = {{0 ,1 ,2 ,inf ,inf ,inf ,inf ,inf },
+                {1 ,0 ,4 ,inf ,5 ,inf ,inf ,inf },
+                {2 ,4 ,0 ,7 ,inf ,3 ,inf ,inf },
+                {inf ,inf ,7 ,0 ,3 ,8 ,inf ,inf },
+                {inf ,5 ,inf ,3 ,0 ,inf ,1 ,4 },
+                {inf ,inf ,3 ,8 ,inf ,0 ,2 ,inf },
+                {inf ,inf ,inf ,inf ,1 ,2 ,0 ,5 },
+                {inf ,inf ,inf ,inf ,4 ,inf ,5 ,0 }};
+        ArrayList<ArrayList<Integer>> G = InitializeGraph();
+        dijkstraAlgorithm(G, 0, 7, mat);
+    }
+
+    public static ArrayList<ArrayList<Integer>> InitializeGraph() {
         ArrayList<ArrayList<Integer>> G = new ArrayList<ArrayList<Integer>>();
         int numOfVertices = 8;
 
