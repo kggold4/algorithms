@@ -1,9 +1,9 @@
 /**
  *
  * Dijkstra algorithm pseudo-code: (written by Kfir Goldfarb)
- * Complexity = O(|E| + |V|)
+ * Complexity = O(|E| + |V|*log|V|)
  *
- * V - list of nodes
+ * V - list of nodes (V is in G)
  * neighbor(v) - return list neighbors of v
  * weight(v, u) - return the weight between v and u
  * s - start node
@@ -21,11 +21,11 @@
  *      *end-for
  *
  *      Q - priority queue
- *      q.enqueue(s)
+ *      Q.enqueue(s)
  *      dist[s] = 0
  *
- *      while(!q.empty()):
- *          u = q.dequeue()
+ *      while(!Q.empty()):
+ *          u = Q.dequeue()
  *          for(v in neighbors(u)):
  *              if(visited[v] == false):
  *                  if(dist[v] > dist[u] + weight(u, v)):
@@ -34,12 +34,12 @@
  *                      Q.enqueue(v)
  *                  *end-if
  *              *end-if
- *
- *              visited[u] = true
- *              if(u == e):
- *                  break
- *              end-if
  *          *end-for
+ *
+ *          visited[u] = true
+ *          if(u == e):
+ *              break
+ *          end-if
  *      *end-while
  *
  *      // build path:
