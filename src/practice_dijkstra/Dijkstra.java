@@ -1,3 +1,59 @@
+/**
+ *
+ * Dijkstra algorithm pseudo-code: (written by Kfir Goldfarb)
+ *
+ * V - list of nodes
+ * neighbor(v) - return list neighbors of v
+ * weight(v, u) - return the weight between v and u
+ * s - start node
+ * e - end node
+ *
+ *  dijkstra():
+ *      prev[] - save prev nodes
+ *      visited[] - mark nodes as visited
+ *      dist[] - save destination of each node from start node
+ *      n = |V|
+ *      for (from i = 0 to n):
+ *          prev[i] = nil
+ *          dist[i] = infinity
+ *          visited[i] = false
+ *      *end-for
+ *
+ *      Q - priority queue
+ *      q.enqueue(s)
+ *      dist[s] = 0
+ *
+ *      while(!q.empty()):
+ *          u = q.dequeue()
+ *          for(v in neighbors(u)):
+ *              if(visited[v] == false):
+ *                  if(dist[v] > dist[u] + weight(u, v)):
+ *                      dist[v] = dist[u] + weight(u, v)
+ *                      pred[v] = u
+ *                      Q.enqueue(v)
+*                   *end-if
+ *              *end-if
+ *
+ *              visited[u] = true
+ *              if(u == e):
+ *                  break
+ *              end-if
+ *          *end-for
+ *      *end-while
+ *
+ *      // build path:
+ *
+ *      k = e
+ *      path = string(k)
+ *      while(k != s):
+ *          k = pred[k]
+ *          path = string(k) + "->" + path
+ *      *end-while
+ *
+ *      return path
+ *
+ */
+
 package practice_dijkstra;
 
 import java.util.ArrayList;
