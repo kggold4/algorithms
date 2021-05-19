@@ -2,9 +2,9 @@ package exercise5;
 
 public class _06_Best {
 
-    int startIndex;
-    int endIndex;
-    int sum;
+    public int startIndex;
+    public int endIndex;
+    public int sum;
 
     public void Calculate(int[] a)
     {
