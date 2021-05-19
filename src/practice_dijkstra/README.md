@@ -7,7 +7,7 @@
 * weight(v, u) - return the weight between v and u
 * s - start node
 * e - end node
-* Q - priority queue
+* Q - priority queue data structure
 
 ```
 dijkstra():
@@ -38,7 +38,7 @@ dijkstra():
         visited[u] = true
         if(u == e):
             break
-        end-if
+        *end-if
     *end-while
     
     // build path:
