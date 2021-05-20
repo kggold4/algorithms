@@ -1,6 +1,7 @@
 package exercise2;
 
 import exercise1._01_Bottles_Problem;
+
 import java.util.ArrayList;
 
 public class _02_Floyd_Warshall_Binary {

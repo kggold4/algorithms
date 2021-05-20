@@ -1,5 +1,5 @@
-## BFS algorithm pseudo-code:
 * (written by Kfir Goldfarb)
+## BFS algorithm pseudo-code:
 ### Complexity = O(|E| + |V|)
 
 * G - list of all nodes in the graph
@@ -35,4 +35,47 @@ BFS(G, s):
         *end-for
         color[u] = BLACK
     *end-while
+```
+
+
+## BFS print-path pseudo-code:
+### Complexity = O(|V|)
+
+```
+print-path-bfs(G, s, e):
+    if s == e:
+        print s
+    else if parent[e] = null:
+        print "not valid path from" s "to" e
+    else:
+        print-path(G, s, parent[e])
+    *end-if
+    print e
+```
+
+## BFS is_connected pseudo-code:
+
+```
+is_connected(G):
+    BFS(G)
+    for each color in colors of G:
+        if color != BLACK:
+            return false
+        *end-if
+    *end-for
+    return true
+```
+
+## BFS number of connected components pseudo-code:
+
+```
+connected_components(G):
+    counter = 0
+    T = G
+    while all node in T are not BLACK:
+        BFS(T)
+        counter++
+        T = T - all the BLACK nodes
+    *end-while
+    return counter 
 ```
