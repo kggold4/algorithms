@@ -1,4 +1,5 @@
 * (written by Kfir Goldfarb)
+
 ## BFS algorithm pseudo-code:
 ### Complexity = O(|E| + |V|)
 
@@ -54,6 +55,7 @@ print-path-bfs(G, s, e):
 ```
 
 ## BFS is_connected pseudo-code:
+### Complexity = O(|E| + 2|V|)
 
 ```
 is_connected(G):
@@ -67,15 +69,65 @@ is_connected(G):
 ```
 
 ## BFS number of connected components pseudo-code:
+### Complexity = O(|E| + |V|) + O(|E| + |V| - 1) + O(|E| + |V| - 2) + ... + O(|E| + 1) = O(|E| + |V|^2)
 
 ```
-connected_components(G):
+number_of_connected_components(G):
     counter = 0
     T = G
-    while all node in T are not BLACK:
+    while all node in G are not BLACK:
         BFS(T)
+        T = T - all the BLACK nodes of T
         counter++
-        T = T - all the BLACK nodes
     *end-while
     return counter 
+```
+
+## BFS return connected components of node pseudo-code:
+### Complexity = O(|E| + |V|) + O(|E| + |V| - 1) + O(|E| + |V| - 2) + ... + O(|E| + 1) = O(|E| + |V|^2)
+
+```
+connected_components(G, s):
+    T = G
+    while all node in G are not BLACK:
+        BFS(T)
+        T = T - all the BLACK nodes of T
+        if BLACK nodes of T contains s:
+            temp_list = all the BLACK nodes of T
+            return temp_list
+        *end-if
+    *end-while
+    return empty list
+```
+
+## BFS fround diam of graph pseudo-code solution-1:
+### Complexity = O(|E+V| * |V|)
+
+* diam - the max diam in the graph
+
+```
+graph_diam(G):
+    diam = 0
+    for each s in G:
+        BFS(G, s)
+        max = MAX(distance[s])
+        if max > diam:
+            diam = max
+        *end-if
+    *end-for
+    return diam
+```
+
+## BFS fround diam of graph pseudo-code solution-2:
+### Complexity = O(2(|E| + |V|)) = O(|E| + |V|)
+
+* diam - the max diam in the graph
+
+```
+graph_diam(G):
+    select random s in G
+    BFS(G, s)
+    u = the node with the max value in distance list
+    BFS(G, u)
+    return max value in distance list    
 ```
