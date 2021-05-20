@@ -12,5 +12,5 @@
 1. [Best Max Sum of subArray](src/practice_best_subarray_sum)
 1. [Single-Source Dijkstra](src/practice_dijkstra)
 1. [Multi-Source Dijkstra](src/practice_dijkstra)
-1. BFS
+1. [BFS](src/practice_bfs)
 1. DFS
