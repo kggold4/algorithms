@@ -60,7 +60,7 @@ public class FloydWarshall {
 
     /**
      * isConnected of boolean matrix
-     * complexity = O(n^2)
+     * complexity = O(n)
      * @param mat
      * @return
      */
