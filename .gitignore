@@ -1,3 +1,7 @@
 .idea/*
 out/*
+<<<<<<< HEAD
 Algorithms 2.iml
+=======
+Algorithms 1.iml
+>>>>>>> algo-1/main
