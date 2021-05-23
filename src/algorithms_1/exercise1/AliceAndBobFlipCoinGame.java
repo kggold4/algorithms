@@ -9,7 +9,7 @@ package algorithms_1.exercise1;
  * 			   Bob calls the opposite of what he received - Probability 1
  */
 
-public class AliceAndBobFlipCoinGam {
+public class AliceAndBobFlipCoinGame {
 	//**************************************************
 	//************************************************
 	//********** method returns 0 or 1 randomly **********
