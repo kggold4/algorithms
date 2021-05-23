@@ -1,9 +1,11 @@
 # Algorithms
 
-## Ariel University Course semester a-b 2020/1, using java programming language
-
+## By Kfir Goldfarb
+### Ariel University Course semester a-b 2020/1, using java programming language
  
-# Algorithms 1
+## <i>Algorithms 1 Problems:</i>
+
+* see the <a href="https://github.com/kggold4/computer-science-b.a-materials/tree/main/year%202/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9E%D7%99%D7%9D%201">theoretical study materials:</a>
 
 1. [Parking Solution](src/algorithms_1/exercise1/lecture)
 1. [Floyd Cycle Detector](src/algorithms_1/exercise1)
@@ -25,9 +27,9 @@
 1. [Race](src/algorithms_1/maraton2)
 1. [Largest Plus Matrix](src/algorithms_1/maraton2)
 
+## <i>Algorithms 2 Problems</i>:
 
-### Algorithms 2:
-
+* see the <a href="https://github.com/kggold4/computer-science-b.a-materials/tree/main/year%202/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9E%D7%99%D7%9D%202">theoretical study materials:</a>
 
 1. [Bottle Problem](src/algorithms_2/practice_bottle_problem)
 1. [Floyd-Warshall Boolean](src/algorithms_2/practice_floyd_warshall)
