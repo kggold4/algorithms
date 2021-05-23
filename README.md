@@ -4,7 +4,8 @@
 
 ### Algorithms:
 
-1. Bottle Problem
+
+1. [Bottle Problem](src/practice_bottle_problem)
 1. [Floyd-Warshall Boolean](src/practice_floyd_warshall)
 1. [Floyd-Warshall Weighted](src/practice_floyd_warshall)
 1. Chocolate
