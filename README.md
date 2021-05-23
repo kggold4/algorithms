@@ -2,7 +2,7 @@
 
 ## Ariel University Course semester a-b 2020/1, using java programming language
 
-
+ 
 # Algorithms 1
 
 1.
