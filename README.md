@@ -1,7 +1,7 @@
 # Algorithms
 
 ## By Kfir Goldfarb
-### Ariel University Course semester a-b 2020/1, using java programming language
+### Ariel University Courses semesters a-b 2020/21, using java and python programming languages
  
 ## <i>Algorithms 1 Problems:</i>
 
@@ -39,5 +39,6 @@
 1. [Best Max Sum of subArray](src/algorithms_2/practice_best_subarray_sum)
 1. [Single-Source Dijkstra](src/algorithms_2/practice_dijkstra)
 1. [Multi-Source Dijkstra](src/algorithms_2/practice_dijkstra)
+1. [Burning Trees](src/algorithms_2/practice_burning_trees)
 1. [BFS](src/algorithms_2/practice_bfs)
 1. DFS
