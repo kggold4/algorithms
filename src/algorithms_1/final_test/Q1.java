@@ -1,3 +1,5 @@
+package algorithms_1.final_test;
+
 public class Q1 {
     public static int lcs(int[] X, int[] Y) {
 

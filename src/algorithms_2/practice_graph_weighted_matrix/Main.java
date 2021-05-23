@@ -9,6 +9,6 @@ public class Main {
         System.out.println(m);
         m.floyd_warshall();
         System.out.println(m);
-        System.out.println(GraphWeightedMatrix.toString(m.path_matrix()));
+//        System.out.println(GraphWeightedMatrix.toString(m.path_matrix()));
     }
 }

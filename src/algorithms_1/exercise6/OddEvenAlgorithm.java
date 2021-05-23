@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise6;
+package algorithms_1.exercise6;
 /**
  * Even Odd Algorithm is not optimal almost:
  * compare between sum of elements at even index 

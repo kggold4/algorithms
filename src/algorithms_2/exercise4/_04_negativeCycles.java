@@ -1,4 +1,4 @@
-package algorithms_2.algo_2_exercise4;
+package algorithms_2.exercise4;
 
 public class _04_negativeCycles {
     static int inf = 1000000;

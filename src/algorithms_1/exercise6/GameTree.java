@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise6;
+package algorithms_1.exercise6;
 
 /**
  * Game Numbers - Exhaustive Search Algorithm

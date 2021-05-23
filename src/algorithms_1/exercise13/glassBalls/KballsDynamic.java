@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise13.glassBalls;
+package algorithms_1.exercise13.glassBalls;
 /**
  * 
  * Glass Balls Algorithm:

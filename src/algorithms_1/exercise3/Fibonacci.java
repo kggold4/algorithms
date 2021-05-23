@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise3;
+package algorithms_1.exercise3;
 
 public class Fibonacci {
 

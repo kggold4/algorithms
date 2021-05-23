@@ -1,4 +1,4 @@
-package Duel_3d;
+package algorithms_1.exercise9;
 
 import java.util.Arrays;
 

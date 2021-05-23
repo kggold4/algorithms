@@ -1,4 +1,4 @@
-package power;
+package algorithms_1.exercise12;
 
 public class Power {
 	

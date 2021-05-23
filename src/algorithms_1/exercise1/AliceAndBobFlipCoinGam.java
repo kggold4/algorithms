@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise1;
+package algorithms_1.exercise1;
 /**
  * Alice and Bob flip coin game:
  * Strategy 1. Alice calls a random number - Probability 1/2

@@ -1,6 +1,6 @@
-package algorithms_2.algo_2_exercise2;
+package algorithms_2.exercise2;
 
-import algorithms_2.algo_2_exercise1._01_Bottles_Problem;
+import algorithms_2.exercise1.*;
 
 import java.util.ArrayList;
 

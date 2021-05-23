@@ -1,4 +1,4 @@
-package algorithms_2.algo_2_exercise3;
+package algorithms_2.exercise3;
 
 public class _03_Floyd_Warshall_weights {
 

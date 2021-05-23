@@ -1,4 +1,4 @@
-package algorithms_2.algo_2_exercise5;
+package algorithms_2.exercise5;
 
 public class _06_Best {
 

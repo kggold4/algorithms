@@ -1,4 +1,4 @@
-package Donuts;
+package algorithms_1.exercise10;
 
 public class DonutsProblem {
 	private static final int time = 2;

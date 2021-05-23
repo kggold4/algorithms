@@ -1,4 +1,4 @@
-package algorithms_2.algo_2_exercise1;
+package algorithms_2.exercise1;
 
 public class _01_Bottles_Problem {
 

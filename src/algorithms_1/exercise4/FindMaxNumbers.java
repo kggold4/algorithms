@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise4;
+package algorithms_1.exercise4;
 
 import java.util.Arrays;
 

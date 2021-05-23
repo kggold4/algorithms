@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise2;
+package algorithms_1.exercise2;
 
 public class FindMinMax {
     public static void main(String[] args) {

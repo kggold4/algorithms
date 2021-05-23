@@ -1,4 +1,4 @@
-package algorithms_2.algo_2_exercise8;
+package algorithms_2.exercise8;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

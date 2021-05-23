@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise7;
+package algorithms_1.exercise7;
 
 public class GlassBalls {
 

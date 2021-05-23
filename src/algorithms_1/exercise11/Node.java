@@ -1,4 +1,4 @@
-package AeroplaneProblem;
+package algorithms_1.exercise11;
 /**
  * class Node:
  * x,y - the price for get down (y) or left (x)

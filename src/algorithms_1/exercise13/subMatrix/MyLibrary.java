@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise13.subMatrix;
+package algorithms_1.exercise13.subMatrix;
 
 
 public class MyLibrary {

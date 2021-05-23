@@ -1,4 +1,4 @@
-package AeroplaneProblem;
+package algorithms_1.exercise11;
 
 public class InitMatrixOfPrices {
 	//mat that was given as example

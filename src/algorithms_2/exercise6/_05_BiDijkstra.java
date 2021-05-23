@@ -1,4 +1,4 @@
-package algorithms_2.algo_2_exercise6;
+package algorithms_2.exercise6;
 
 import java.util.ArrayList;
 

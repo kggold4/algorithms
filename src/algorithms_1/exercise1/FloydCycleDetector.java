@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise1;
+package algorithms_1.exercise1;
 
 public class FloydCycleDetector {
 	private int position;

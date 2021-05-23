@@ -1,6 +1,6 @@
-package algorithms_2.algo_2_exercise7;// Created by Or Kadrawi
+package algorithms_2.exercise7;// Created by Or Kadrawi
 
-import algorithms_2.algo_2_exercise5._06_Best;
+import algorithms_2.exercise5._06_Best;
 
 public class _07_maxSubmatrixSum {
 	

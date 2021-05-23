@@ -1,3 +1,5 @@
+package algorithms_1.final_test;
+
 public class Q2 {
     public static int longestOfOne(int[] arr) {
 

@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise12;
+package algorithms_1.exercise12;
 
 public class Fibo {
 

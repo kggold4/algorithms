@@ -1,4 +1,4 @@
-package algorithms_1.algo_1_exercise6;
+package algorithms_1.exercise6;
 /**
  * Game of numbers
  * There are 2*n numbers in a line:
