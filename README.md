@@ -42,3 +42,8 @@
 1. [Burning Trees](src/algorithms_2/practice_burning_trees)
 1. [BFS](src/algorithms_2/practice_bfs)
 1. DFS
+
+# External Algorithms - self learning:
+## <i>Data-Structures Algorithms Problems</i>:
+### <i>LinkedList</i>:
+1. [Reverse LinkedList](src/data_structures/linkedlist)
