@@ -24,4 +24,12 @@ public class BestSumArray {
             }
         }
     }
+
+    public static void main(String[] args) {
+        BestSumArray bsa = new BestSumArray();
+        int[] arr = {65,6,84,4,46,4,4,5,5,6,5,4,-50,59,94,5,5,-5,9,-2,5,-6};
+
+        System.out.println();
+
+    }
 }
