@@ -41,9 +41,14 @@
 1. [Multi-Source Dijkstra](src/algorithms_2/practice_dijkstra)
 1. [Burning Trees](src/algorithms_2/practice_burning_trees)
 1. [BFS](src/algorithms_2/practice_bfs)
-1. DFS
+1. [DFS](src/algorithms_2/practice_dfs)
 
 # External Algorithms - self learning:
+
 ## <i>Data-Structures Algorithms Problems</i>:
+
 ### <i>LinkedList</i>:
 1. [Reverse LinkedList](src/data_structures/linkedlist)
+
+### <i>Arrays</i>:
+1. [Binary Search](src/data_structures/arrays)
