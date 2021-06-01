@@ -1,6 +1,6 @@
 * (written by Kfir Goldfarb)
 
-## DFS algorithm pseudo-code:
+## DFS recursive algorithm pseudo-code:
 ### Complexity = O(|E| + |V|)
 
 * n - number of nodes in the graph
@@ -18,4 +18,29 @@ DFS(G, s):
         
 start = 0
 BFS(s)
+```
+
+## Count number of connected components with DFS recursive algorithm pseudo-code:
+### Complexity = O(|E| + |V|)
+
+* n - number of nodes in the graph
+* neighbors - contain each node his neighbors
+* count = 0 - count number of connected components
+* components = empty integer array
+* visited - contains for each node true ir false if has been visited ot not
+
+```
+findComponents():
+    for from i to n:
+        count++
+        dfs(i)
+    
+    return (count, components)
+
+DFS(G, s):
+    visited[s] = true
+    components[s] = count
+    for each v in neighbors[s]:
+        if !visited[v]:
+            DFS(G, s)
 ```
