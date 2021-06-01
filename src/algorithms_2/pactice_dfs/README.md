@@ -11,10 +11,12 @@
 DFS(G, s):
     if visited[s]:
         return
+    *end if
     
     visited[s] = true
     for each v in neighbors[s]:
         DFS(G, s)
+    *end-for
         
 start = 0
 BFS(s)
@@ -34,7 +36,7 @@ findComponents():
     for from i to n:
         count++
         dfs(i)
-    
+    *end-for
     return (count, components)
 
 DFS(G, s):
@@ -43,4 +45,6 @@ DFS(G, s):
     for each v in neighbors[s]:
         if !visited[v]:
             DFS(G, s)
+        *end-if
+    *end-for
 ```
