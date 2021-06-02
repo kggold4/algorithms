@@ -47,8 +47,14 @@
 
 ## <i>Data-Structures Algorithms Problems</i>:
 
+### <i>Sorting</i>:
+1. [Bubble Sort](src/data_structures/sorting)
+1. [Merge Sort](src/data_structures/sorting)
+
 ### <i>LinkedList</i>:
 1. [Reverse LinkedList](src/data_structures/linkedlist)
+1. [Sort LinkedList](src/data_structures/linkedlist)
 
 ### <i>Arrays</i>:
 1. [Binary Search](src/data_structures/arrays)
+1. [Shuffle](src/data_structures/arrays/)
