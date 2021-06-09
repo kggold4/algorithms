@@ -68,8 +68,7 @@ public class Diameter {
 
     // Returns diameter of binary tree represented
     // as adjacency list.
-    public int get_diam()
-    {
+    public int get_diam() {
         maxCount = Integer.MIN_VALUE;
 
         /* DFS from a random node and then see
