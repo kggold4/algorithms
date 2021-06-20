@@ -12,13 +12,11 @@ preorder(node):
         preorder(node.left)
         preorder(node.right)
     *end-if
-    
 ```
 
 ### inorder traversal order pseudo-code
 
 ```
-
 inorder():
     inorder(root)
 
@@ -28,13 +26,11 @@ inorder(node):
         print(node.data + ' ')
         inorder(node.right)
     *end-if
-    
 ```
 
 ### postorder traversal order pseudo-code
 
 ```
-
 postorder():
     postorder(root)
 
@@ -44,5 +40,4 @@ postorder(node):
         postorder(node.right)
         print(node.data + ' ')
     *end-if
-
 ```
