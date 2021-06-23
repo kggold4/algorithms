@@ -52,8 +52,8 @@
 1. [Merge Sort](src/data_structures/sorting)
 
 ### <i>LinkedList</i>:
-1. [Reverse LinkedList](src/data_structures/linkedlist)
-1. [Sort LinkedList](src/data_structures/linkedlist)
+1. [Reverse LinkedList](src/data_structures/linked_list)
+1. [Sort LinkedList](src/data_structures/linked_list)
 
 ### <i>Arrays</i>:
 1. [Binary Search](src/data_structures/arrays)

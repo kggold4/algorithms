@@ -1,4 +1,4 @@
-package data_structures.linkedlist;
+package data_structures.linked_list;
 
 public class Reverse {
 
