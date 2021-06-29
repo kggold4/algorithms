@@ -121,3 +121,11 @@ has_negative_circle(G):
     
 *end-has_negative_circle
 ```
+
+
+
+
+
+
+
+

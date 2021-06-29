@@ -32,12 +32,12 @@ public class _01_Bottles_Problem {
         for (int k = 0; k < mat.length; k++) {
             i = getI(k,n);
             j = getJ(k,n);
-            mat[k][getIndex(0,j,n)] = true;
             mat[k][getIndex(i,0,n)] = true;
-            mat[k][getIndex(m,j,n)] = true;
+            mat[k][getIndex(0,j,n)] = true;
             mat[k][getIndex(i,n,n)] = true;
-            mat[k][getIndex(i+j-(Math.min(i+j, n)),Math.min(i+j, n),n)] = true;
+            mat[k][getIndex(m,j,n)] = true;
             mat[k][getIndex(Math.min(i+j, m),i+j-Math.min(i+j, m),n)] = true;
+            mat[k][getIndex(i+j-(Math.min(i+j, n)),Math.min(i+j, n),n)] = true;
         }
         return mat;
     }
