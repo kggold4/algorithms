@@ -2,15 +2,17 @@
 ## Dijkstra algorithm pseudo-code:
 ### Complexity = O(|E| + |V|*log|V|)
 
-* V - list of nodes (V is in G)
-* neighbor(v) - return list neighbors of v
+* G - The graph, G = (V, E)
+  * G[v] when v is a node - return neighbors of v
+* V - set of nodes (V is in G)
+* E - set of edges (E is in G)
 * weight(v, u) - return the weight between v and u
 * s - start node
 * e - end node
 * Q - priority queue data structure
 
 ```
-dijkstra():
+dijkstra(G):
     prev[] - save prev nodes
     visited[] - mark nodes as visited
     dist[] - save destination of each node from start node
@@ -26,7 +28,7 @@ dijkstra():
     
     while(!Q.empty()):
         u = Q.dequeue()
-        for(v in neighbors(u)):
+        for(v in G[u]):
             if(visited[v] == false):
                 if(dist[v] > dist[u] + weight(u, v)):
                     dist[v] = dist[u] + weight(u, v)

@@ -28,7 +28,7 @@ public class BottleProblem {
                 mat[ind][index(i,0,n)] = true;
                 mat[ind][index(0, j, n)] = true;
 
-                // file
+                // fill
                 mat[ind][index(i, n ,n)] = true;
                 mat[ind][index(m, j, n)] = true;
 

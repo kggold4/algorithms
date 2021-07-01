@@ -1,5 +1,9 @@
 package algorithms_2.exercise1;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+
 public class _01_Bottles_Problem {
 
     public static void main(String[] args) {
