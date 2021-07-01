@@ -39,7 +39,7 @@
 1. [Best Max Sum of subArray](src/algorithms_2/practice_best_subarray_sum)
 1. [Single-Source Dijkstra](src/algorithms_2/practice_dijkstra)
 1. [Multi-Source Dijkstra](src/algorithms_2/practice_dijkstra)
-1. [Burning Trees](src/algorithms_2/practice_burning_trees)
+1. [Burning Trees](src/algorithms_2/practice_burning_tree)
 1. [BFS](src/algorithms_2/practice_bfs)
 1. [DFS](src/algorithms_2/practice_dfs)
 

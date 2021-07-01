@@ -1,6 +1,6 @@
 * (written by Kfir Goldfarb)
 
-## Burning Trees' (find centers) algorithm pseudo-code:
+## Burning Tree (find centers) algorithm pseudo-code:
 ### Complexity = O(|V|) = O(n)
 
 * G - the tree/graph data-structure
