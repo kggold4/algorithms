@@ -31,21 +31,21 @@
 
 * see the <a href="https://github.com/kggold4/computer-science-b.a-materials/tree/main/year%202/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9E%D7%99%D7%9D%202">theoretical study materials:</a>
 
-1. [Bottle Problem](src/algorithms_2/practice_bottle_problem)
-1. [Floyd-Warshall Boolean](src/algorithms_2/practice_floyd_warshall)
-1. [Floyd-Warshall Weighted](src/algorithms_2/practice_floyd_warshall)
+1. [Bottle Problem](src/algorithms_2/bottle_problem)
+1. [Floyd-Warshall Boolean](src/algorithms_2/floyd_warshall)
+1. [Floyd-Warshall Weighted](src/algorithms_2/floyd_warshall)
 1. [Chocolate Problem](src/algorithms_2/exercise3)
-1. [Negative Circle Matrix](src/algorithms_2/practice_floyd_warshall)
-1. [Best Algorithm](src/algorithms_2/practice_best_subarray_sum)
-1. [Best Cycle](src/algorithms_2/practice_best_subarray_sum)
-1. [Gas Station Problem](src/algorithms_2/practice_best_subarray_sum)
-1. [Best Matrix](src/algorithms_2/practice_best_subarray_sum)
+1. [Negative Circle Matrix](src/algorithms_2/floyd_warshall)
+1. [Best Algorithm](src/algorithms_2/best_subarray_sum)
+1. [Best Cycle](src/algorithms_2/best_subarray_sum)
+1. [Gas Station Problem](src/algorithms_2/best_subarray_sum)
+1. [Best Matrix](src/algorithms_2/best_subarray_sum)
 1. [Huffman Coding](src/algorithms_2/huffman_coding)
-1. [Single-Source Dijkstra](src/algorithms_2/practice_dijkstra)
-1. [Multi-Source Dijkstra](src/algorithms_2/practice_dijkstra)
-1. [Burning Tree](src/algorithms_2/practice_burning_tree)
-1. [BFS](src/algorithms_2/practice_bfs)
-1. [DFS](src/algorithms_2/practice_dfs)
+1. [Single-Source Dijkstra](src/algorithms_2/dijkstra)
+1. [Multi-Source Dijkstra](src/algorithms_2/dijkstra)
+1. [Burning Tree](src/algorithms_2/burning_tree)
+1. [BFS](src/algorithms_2/bfs)
+1. [DFS](src/algorithms_2/dfs)
 
 # External Algorithms - self learning:
 
