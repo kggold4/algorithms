@@ -1,7 +1,7 @@
 # Algorithms
 
 ## By Kfir Goldfarb
-### Ariel University Courses semesters a-b 2020/21, using java and python programming languages
+### Ariel University Algorithms 1+2 Courses semesters a-b 2020/21 and Self-Learning algorithms - Using Java and Python programming languages
  
 ## <i>Algorithms 1 Problems:</i>
 
