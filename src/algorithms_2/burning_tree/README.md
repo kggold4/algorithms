@@ -3,9 +3,12 @@
 ## Burning Tree (find centers) algorithm pseudo-code:
 ### Complexity = O(|V|) = O(n)
 
-* G - the tree/graph data-structure
-* L - list of node
+* G - graph when G = (V, E)
+    * V - set of the nodes in G
+    * E - set of the edges in G
 * n = |V|
+* L - list of node
+
 
 ```
 find_centers(G):

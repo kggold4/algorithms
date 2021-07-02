@@ -3,8 +3,11 @@
 ## DFS recursive algorithm pseudo-code:
 ### Complexity = O(|E| + |V|)
 
-* n - number of nodes in the graph
-* neighbors - contain each node his neighbors
+* G - graph when G = (V, E)
+    * V - set of the nodes in G
+    * E - set of the edges in G
+* n = |V|
+* ```G[v]``` - contain v neighbors
 * visited - contains for each node true ir false if has been visited ot not
 
 ```
@@ -14,7 +17,7 @@ DFS(G, s):
     *end if
     
     visited[s] = true
-    for each v in neighbors[s]:
+    for each v in G[s]:
         DFS(G, s)
     *end-for
         

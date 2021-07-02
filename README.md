@@ -35,7 +35,7 @@
 1. [Floyd-Warshall Boolean](src/algorithms_2/floyd_warshall)
 1. [Floyd-Warshall Weighted](src/algorithms_2/floyd_warshall)
 1. [Chocolate Problem](src/algorithms_2/exercise3)
-1. [Negative Circle Matrix](src/algorithms_2/floyd_warshall)
+1. [Negative Circle](src/algorithms_2/floyd_warshall)
 1. [Best Algorithm](src/algorithms_2/best_subarray_sum)
 1. [Best Cycle](src/algorithms_2/best_subarray_sum)
 1. [Gas Station Problem](src/algorithms_2/best_subarray_sum)
