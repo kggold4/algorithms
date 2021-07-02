@@ -45,6 +45,7 @@
 1. [Multi-Source Dijkstra](src/algorithms_2/dijkstra)
 1. [Burning Tree - Fire](src/algorithms_2/burning_tree)
 1. [BFS](src/algorithms_2/bfs)
+1. [Graph Diameter](src/algorithms_2/diameter)
 1. [DFS](src/algorithms_2/dfs)
 1. [Euler Cycle](src/algorithms_2/euler_cycle)
 
