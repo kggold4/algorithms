@@ -28,14 +28,14 @@ floyd_warshall(G):
         for from i=0 to n:
             for from j=0 to n:
                 if G[i][k] != ∞ && G[k][j] != ∞:
-                    G[i][j] = MIN(G[i][j], G[i][k] + G[k][j])
+                    G[i][j] = min(G[i][j], G[i][k] + G[k][j])
                 *end-if
             *end-for
         *end-for
     *end-for
 ```
 
-## Boolean graph matrix is strongly connected algorithm pseudo-code - solution 1:
+## Boolean graph matrix checking if strongly connected algorithm pseudo-code - solution 1:
 ### Complexity = O(|V|^2) = O(n^2)
 
 * G - Boolean matrix that represent a graph
@@ -54,7 +54,7 @@ is_connected(G):
     return true
 ```
 
-## Boolean graph matrix is strongly connected algorithm pseudo-code - solution 2:
+## Boolean graph matrix checking if strongly connected algorithm pseudo-code - solution 2:
 ### Complexity = O(|V|) = O(n)
 
 * G - Boolean matrix that represent a graph
@@ -110,22 +110,14 @@ find_negative_diagonal(G):
         *end-if
     *end-for
     
-    return true
+    return false
     
 *end-find_negative_diagonal
     
     
 has_negative_circle(G):
-    floyd_warshall(G);
-    return find_negative_diagonal(G);
+    floyd_warshall(G)
+    return find_negative_diagonal(G)
     
 *end-has_negative_circle
 ```
-
-
-
-
-
-
-
-
