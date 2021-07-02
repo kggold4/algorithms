@@ -1,6 +1,6 @@
 * (written by Kfir Goldfarb)
 
-## Bottle Problem algorithm pseudo-code:
+## Bottle Problem Algorithm pseudo-code:
 ### Complexity = O(n+1) * O(m+1) = O((n+1) * (m+1)) = O(n * m) 
 
 ### helping index function:
@@ -21,8 +21,8 @@ bottle(m, n):
         *end-for
     *end-for
     
-    for from i to m:
-        for from j to n:
+    for from i=0 to m:
+        for from j=0 to n:
             ind = index(i, j, n)
             
             // empty

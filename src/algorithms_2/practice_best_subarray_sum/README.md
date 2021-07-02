@@ -51,8 +51,8 @@ cyrcle_best(A):
     sum_B = best(B)
     
     if sum + sum_B < sum_A:
-        return sum_B
+        return sum_A
     else:
-        return sum + sum_A
+        return sum + sum_B
     *end-if
 ```
