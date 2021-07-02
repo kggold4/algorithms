@@ -19,7 +19,7 @@ DFS(G, s):
     *end-for
         
 start = 0
-BFS(s)
+DFS(s)
 ```
 
 ## Count number of connected components with DFS recursive algorithm pseudo-code:
