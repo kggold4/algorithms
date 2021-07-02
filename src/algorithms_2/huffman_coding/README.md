@@ -43,3 +43,5 @@ getMin(Queue q1, Queue q2):
     *end-if
 *end-getMin
 ```
+
+* In this code the complexity is O(n * log(n)) because the algorithm itself is O(n) and the sorting is O(n*log(n)), if the given array A is already sorted we can ignore the sorting of it (by deleting it) and then the complexity of the algorithm will be O(n)

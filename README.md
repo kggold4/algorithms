@@ -43,7 +43,7 @@
 1. [Huffman Coding](src/algorithms_2/huffman_coding)
 1. [Single-Source Dijkstra](src/algorithms_2/dijkstra)
 1. [Multi-Source Dijkstra](src/algorithms_2/dijkstra)
-1. [Burning Tree](src/algorithms_2/burning_tree)
+1. [Burning Tree - Fire](src/algorithms_2/burning_tree)
 1. [BFS](src/algorithms_2/bfs)
 1. [DFS](src/algorithms_2/dfs)
 
