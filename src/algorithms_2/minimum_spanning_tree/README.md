@@ -50,6 +50,8 @@ reverse_delete(G):
         else:
             G.add(e)
             T.delete(e)
+        *end-if
+    *end-while
 
     return T
 ```
