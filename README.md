@@ -47,6 +47,10 @@
 1. [BFS](src/algorithms_2/bfs)
 1. [Graph Diameter](src/algorithms_2/diameter)
 1. [DFS](src/algorithms_2/dfs)
+1. [Kruskal](src/algorithms_2/minimum_spanning_tree)
+1. [Reversed Kruskal (Reverse-Delete)](src/algorithms_2/minimum_spanning_tree)
+1. [Prim](src/algorithms_2/minimum_spanning_tree)
+1. [Boruvka](src/algorithms_2/minimum_spanning_tree)
 1. [Euler Cycle](src/algorithms_2/euler_cycle)
 
 # External Algorithms - self learning:

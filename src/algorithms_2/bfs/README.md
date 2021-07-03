@@ -3,7 +3,9 @@
 ## BFS algorithm pseudo-code:
 ### Complexity = O(|E| + |V|)
 
-* G - list of all nodes in the graph
+* G - graph when G = (V, E)
+    * V - set of the nodes in G
+    * E - set of the edges in G
 * s - the starting node
 * Color = {WHITE, GREY, BLACK}
 * distance - for each node save the distance between him to the start node - number of edges to go throw
