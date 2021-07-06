@@ -1,6 +1,6 @@
 package data_structures.sorting;
 
-import data_structures.arrays.Shuffle;
+import data_structures.arrays.Lib;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
@@ -9,7 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class SortingAlgorithmsTest {
 
     private static final int n = 100000;
-    private static final int[] Original = Shuffle.create_array(n);
+    private static final int max = 10000;
+    private static final int[] Original = Lib.create_random_array(n, max);
     private static int[] sortedOriginal = Arrays.copyOf(Original, n);
     private static long getTime() { return System.currentTimeMillis(); }
     private static void printTime(String sort, long time) { System.out.println(sort + " time: " + time + " ms"); }

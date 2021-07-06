@@ -21,18 +21,4 @@ public class Shuffle {
         shuffle(arr);
         System.out.println(Arrays.toString(arr));
     }
-
-    /**
-     * generate random array by given length
-     * @param len
-     * @return
-     */
-    public static int[] create_array(int len) {
-        int[] arr = new int[len];
-        for(int i = 0; i < len; i++) {
-            arr[i] = i;
-        }
-        shuffle(arr);
-        return arr;
-    }
 }
