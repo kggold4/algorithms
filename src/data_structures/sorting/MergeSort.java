@@ -1,8 +1,5 @@
 package data_structures.sorting;
 
-import data_structures.arrays.Shuffle;
-import java.util.Arrays;
-
 public class MergeSort {
 
     public static void mergeSort(int[] arr) {
@@ -29,12 +26,5 @@ public class MergeSort {
 
             for(int p = 0; p < n; p++) arr[low + p] = temp[p];
         }
-    }
-
-    public static void main(String[] args) {
-        int[] arr = Shuffle.create_array(100);
-        System.out.println("array before sort: " + Arrays.toString(arr));
-        mergeSort(arr);
-        System.out.println("array after sort: " + Arrays.toString(arr));
     }
 }

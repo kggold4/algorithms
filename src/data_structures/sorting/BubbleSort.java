@@ -1,9 +1,5 @@
 package data_structures.sorting;
 
-import data_structures.arrays.Shuffle;
-
-import java.util.Arrays;
-
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         for(int i = 0; i < arr.length; i++) {
@@ -17,12 +13,5 @@ public class BubbleSort {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = Shuffle.create_array(100);
-        System.out.println("array before sort: " + Arrays.toString(arr));
-        bubbleSort(arr);
-        System.out.println("array after sort: " + Arrays.toString(arr));
     }
 }
