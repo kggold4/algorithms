@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SortingAlgorithmsTest {
 
     private static final int n = 100000;
-    private static final int max = 10000;
+    private static final int max = 100000;
     private static final int[] Original = Lib.create_random_array(n, max);
     private static int[] sortedOriginal = Arrays.copyOf(Original, n);
     private static long getTime() { return System.currentTimeMillis(); }
@@ -24,7 +24,7 @@ class SortingAlgorithmsTest {
     void maxSort() {
         int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
-        MaxSort.maxSort(A);
+        CountingSort.countingSort(A);
         long end = getTime();
         printTime("maxSort", end-start);
         Arrays.sort(sortedOriginal);
