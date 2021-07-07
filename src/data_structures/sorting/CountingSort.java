@@ -2,10 +2,6 @@ package data_structures.sorting;
 
 public class CountingSort {
 
-    /**
-     * Max Sort
-     * @param A
-     */
     public static void countingSort(int[] A) {
 
         int max = 0, index = 0;
