@@ -2,7 +2,7 @@ package data_structures.sorting;
 
 public class HeapSort {
 
-    public void heapSort(int arr[]) {
+    public static void heapSort(int arr[]) {
         int n = arr.length;
         for(int i = n / 2 - 1; i >= 0; i--) heapify(arr, n, i);
         for(int i = n - 1; i > 0; i--) {
@@ -13,7 +13,7 @@ public class HeapSort {
         }
     }
 
-    void heapify(int arr[], int n, int i) {
+    private static void heapify(int arr[], int n, int i) {
         int largest = i;
         int l = 2 * i + 1, r = 2 * i + 2;
         if (l < n && arr[l] > arr[largest]) largest = l;

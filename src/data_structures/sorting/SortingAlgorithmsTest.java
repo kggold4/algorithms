@@ -20,7 +20,7 @@ class SortingAlgorithmsTest {
     }
 
     @Test
-    void maxSort() {
+    void countingSort() {
         int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
         CountingSort.countingSort(A);
@@ -31,62 +31,82 @@ class SortingAlgorithmsTest {
     }
     @Test
     void javaSort() {
-        int[] B = Arrays.copyOf(Original, n);
+        int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
-        Arrays.sort(B);
+        Arrays.sort(A);
         long end = getTime();
         printTime("javaSort", end-start);
         Arrays.sort(sortedOriginal);
-        assertEquals(true, equalsArrays(B, sortedOriginal));
+        assertEquals(true, equalsArrays(A, sortedOriginal));
     }
     @Test
     void bubbleSort() {
-        int[] C = Arrays.copyOf(Original, n);
+        int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
-        BubbleSort.bubbleSort(C);
+        BubbleSort.bubbleSort(A);
         long end = getTime();
         printTime("bubbleSort", end-start);
         Arrays.sort(sortedOriginal);
-        assertEquals(true, equalsArrays(C, sortedOriginal));
+        assertEquals(true, equalsArrays(A, sortedOriginal));
     }
     @Test
     void selectionSort() {
-        int[] D = Arrays.copyOf(Original, n);
+        int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
-        SelectionSort.selectionSort(D);
+        SelectionSort.selectionSort(A);
         long end = getTime();
         printTime("selectionSort", end-start);
         Arrays.sort(sortedOriginal);
-        assertEquals(true, equalsArrays(D, sortedOriginal));
+        assertEquals(true, equalsArrays(A, sortedOriginal));
     }
     @Test
     void insertionSort() {
-        int[] E = Arrays.copyOf(Original, n);
+        int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
-        InsertionSort.insertionSort(E);
+        InsertionSort.insertionSort(A);
         long end = getTime();
         printTime("insertionSort", end-start);
         Arrays.sort(sortedOriginal);
-        assertEquals(true, equalsArrays(E, sortedOriginal));
+        assertEquals(true, equalsArrays(A, sortedOriginal));
     }
     @Test
     void mergeSort() {
-        int[] F = Arrays.copyOf(Original, n);
+        int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
-        MergeSort.mergeSort(F);
+        MergeSort.mergeSort(A);
         long end = getTime();
         printTime("mergeSort", end-start);
         Arrays.sort(sortedOriginal);
-        assertEquals(true, equalsArrays(F, sortedOriginal));
+        assertEquals(true, equalsArrays(A, sortedOriginal));
     }
     @Test
     void quickSort() {
-        int[] G = Arrays.copyOf(Original, n);
+        int[] A = Arrays.copyOf(Original, n);
         long start = getTime();
-        QuickSort.quickSort(G);
+        QuickSort.quickSort(A);
         long end = getTime();
         printTime("quickSort", end-start);
         Arrays.sort(sortedOriginal);
-        assertEquals(true, equalsArrays(G, sortedOriginal));
+        assertEquals(true, equalsArrays(A, sortedOriginal));
+    }
+    @Test
+    void heapSort() {
+        int[] A = Arrays.copyOf(Original, n);
+        long start = getTime();
+        HeapSort.heapSort(A);
+        long end = getTime();
+        printTime("heapSort", end-start);
+        Arrays.sort(sortedOriginal);
+        assertEquals(true, equalsArrays(A, sortedOriginal));
+    }
+    @Test
+    void radixSort() {
+        int[] A = Arrays.copyOf(Original, n);
+        long start = getTime();
+        RadixSort.radixSort(A);
+        long end = getTime();
+        printTime("radixSort", end-start);
+        Arrays.sort(sortedOriginal);
+        assertEquals(true, equalsArrays(A, sortedOriginal));
     }
 }
