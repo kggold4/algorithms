@@ -59,7 +59,13 @@
 
 ### <i>Sorting</i>:
 1. [Bubble Sort](src/data_structures/sorting)
+1. [Insertion Sort](src/data_structures/sorting)
+1. [Selection Sort](src/data_structures/sorting)
+1. [Counting Sort](src/data_structures/sorting)
+1. [Heap Sort](src/data_structures/sorting)
 1. [Merge Sort](src/data_structures/sorting)
+1. [Quick Sort](src/data_structures/sorting)
+1. [Radix Sort](src/data_structures/sorting)
 
 ### <i>LinkedList</i>:
 1. [Reverse LinkedList](src/data_structures/linked_list)
