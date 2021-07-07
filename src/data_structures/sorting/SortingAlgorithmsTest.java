@@ -3,7 +3,6 @@ package data_structures.sorting;
 import data_structures.arrays.Lib;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class SortingAlgorithmsTest {
@@ -26,7 +25,7 @@ class SortingAlgorithmsTest {
         long start = getTime();
         CountingSort.countingSort(A);
         long end = getTime();
-        printTime("maxSort", end-start);
+        printTime("countingSort", end-start);
         Arrays.sort(sortedOriginal);
         assertEquals(true, equalsArrays(A, sortedOriginal));
     }
