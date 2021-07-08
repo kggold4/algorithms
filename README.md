@@ -76,6 +76,6 @@
 1. [Shuffle](src/data_structures/arrays/)
 
 ### <i>Binary Tree</i>:
-1. [Preorder traversal](src/data_structures/binary_search_tree)
-1. [Inorder traversal](src/data_structures/binary_search_tree)
-1. [Postorder traversal](src/data_structures/binary_search_tree)
+1. [Preorder Traversal](src/data_structures/binary_search_tree)
+1. [Inorder Traversal](src/data_structures/binary_search_tree)
+1. [Postorder Traversal](src/data_structures/binary_search_tree)
