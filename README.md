@@ -67,13 +67,13 @@
 1. [Quick Sort](src/data_structures/sorting)
 1. [Radix Sort](src/data_structures/sorting)
 
-### <i>LinkedList</i>:
-1. [Reverse LinkedList](src/data_structures/linked_list)
-1. [Sort LinkedList](src/data_structures/linked_list)
-
 ### <i>Arrays</i>:
 1. [Binary Search](src/data_structures/arrays)
 1. [Shuffle](src/data_structures/arrays/)
+
+### <i>LinkedList</i>:
+1. [Reverse LinkedList](src/data_structures/linked_list)
+1. [Sort LinkedList](src/data_structures/linked_list)
 
 ### <i>Binary Tree</i>:
 1. [Preorder Traversal](src/data_structures/binary_search_tree)
