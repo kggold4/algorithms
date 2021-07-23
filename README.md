@@ -79,3 +79,4 @@
 1. [Preorder Traversal](src/data_structures/binary_search_tree)
 1. [Inorder Traversal](src/data_structures/binary_search_tree)
 1. [Postorder Traversal](src/data_structures/binary_search_tree)
+1. [Size of a tree](src/data_structures/binary_search_tree)

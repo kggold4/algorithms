@@ -1,6 +1,6 @@
 # Binary Search Tree
 
-### preorder traversal order pseudo-code
+### Preorder traversal order pseudo-code
 
 ```
 preorder():
@@ -14,7 +14,7 @@ preorder(node):
     *end-if
 ```
 
-### inorder traversal order pseudo-code
+### Inorder traversal order pseudo-code
 
 ```
 inorder():
@@ -28,7 +28,7 @@ inorder(node):
     *end-if
 ```
 
-### postorder traversal order pseudo-code
+### Postorder traversal order pseudo-code
 
 ```
 postorder():
@@ -40,4 +40,11 @@ postorder(node):
         postorder(node.right)
         print(node.data + ' ')
     *end-if
+```
+
+### Get a size of a binary search tree pseudo-code
+```
+size(root):
+    if root == null: return 0
+    else return size(root.left) + size(root.right) + 1
 ```
