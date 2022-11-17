@@ -58,9 +58,9 @@
 
 ### Fair Area division
 
-1. [Cut and Choose]()
-2. [Last Diminisher]()
-3. [Even Paz]()
+1. [Cut and Choose](src/economic_algorithms/Fair%20Area%20division/README.md)
+2. [Last Diminisher](src/economic_algorithms/Fair%20Area%20division/README.md)
+3. [Even Paz](src/economic_algorithms/Fair%20Area%20division/README.md)
 
 ### 
 
